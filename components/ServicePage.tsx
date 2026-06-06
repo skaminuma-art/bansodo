@@ -71,13 +71,13 @@ export default function ServicePage({
             {service.recommended.map((item) => (
               <li
                 key={item}
-                className="flex items-start gap-3 rounded-sm border border-primary/10 bg-bg-custom px-5 py-4"
+                className="flex w-full items-start gap-3 overflow-visible rounded-sm border border-primary/10 bg-bg-custom px-4 py-4 sm:px-5"
               >
                 <Check
                   className="mt-0.5 h-5 w-5 shrink-0 text-accent"
                   aria-hidden="true"
                 />
-                <span className="text-base leading-7 text-text-custom">
+                <span className="min-w-0 flex-1 whitespace-normal break-words text-base leading-7 text-text-custom">
                   {item}
                 </span>
               </li>
