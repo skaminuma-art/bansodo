@@ -51,7 +51,9 @@ export default function ContactPage() {
             お問い合わせ
           </h1>
           <p className="mt-6 text-base leading-8 text-white/75">
-            費用・内容、なんでもお気軽にご相談ください。
+            費用・内容、なんでも
+            <br className="sm:hidden" />
+            お気軽にご相談ください。
           </p>
         </div>
       </section>
@@ -61,7 +63,7 @@ export default function ContactPage() {
           <div className="text-center">
             <a
               href={SITE.lineUrl}
-              className="inline-flex w-full items-center justify-center gap-3 rounded-sm bg-accent px-10 py-5 text-lg font-bold text-primary transition-opacity hover:opacity-90 sm:w-auto sm:text-xl"
+              className="inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-sm bg-accent px-8 py-4 text-base font-bold leading-snug text-primary transition-opacity hover:opacity-90 sm:w-auto sm:px-10 sm:py-5 sm:text-xl"
             >
               <MessageCircle className="h-6 w-6" aria-hidden="true" />
               LINEで気軽に相談する
@@ -193,7 +195,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-sm border-2 border-primary px-8 py-4 text-base font-medium text-primary transition-colors hover:bg-primary/5 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-sm border-2 border-primary px-8 py-4 text-base font-medium leading-snug text-primary transition-colors hover:bg-primary/5 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
               >
                 <Send className="h-5 w-5" aria-hidden="true" />
                 {status === "loading" ? "送信中..." : "メールで問い合わせる"}

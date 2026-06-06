@@ -11,12 +11,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-primary/10 bg-bg-custom/95 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-        <Link href="/" className="flex flex-col items-start">
-          <span className="font-mincho text-2xl font-bold tracking-widest text-primary">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-8 sm:py-4">
+        <Link href="/" className="flex shrink-0 flex-col items-start">
+          <span className="font-mincho text-xl font-bold tracking-wider text-primary sm:text-2xl sm:tracking-widest">
             {SITE.name}
           </span>
-          <span className="font-gothic text-xs tracking-[0.3em] text-primary/60">
+          <span className="font-gothic text-[10px] tracking-[0.25em] text-primary/60 sm:text-xs sm:tracking-[0.3em]">
             {SITE.nameEn}
           </span>
         </Link>
@@ -71,7 +71,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="text-primary lg:hidden"
+          className="shrink-0 text-primary lg:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "メニューを閉じる" : "メニューを開く"}
           aria-expanded={mobileOpen}
@@ -86,7 +86,7 @@ export default function Header() {
 
       {mobileOpen && (
         <nav
-          className="border-t border-primary/10 bg-bg-custom px-5 py-5 lg:hidden"
+          className="border-t border-primary/10 bg-bg-custom px-4 py-5 sm:px-5 lg:hidden"
           aria-label="モバイルメニュー"
         >
           <p className="mb-3 text-xs font-medium tracking-widest text-primary/50">
@@ -97,7 +97,7 @@ export default function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="block py-2.5 text-sm text-text-custom"
+                  className="block py-2.5 text-sm leading-relaxed text-text-custom"
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.label}
@@ -127,7 +127,7 @@ export default function Header() {
           </ul>
           <a
             href={SITE.lineUrl}
-            className="mt-5 block w-full rounded-sm bg-accent py-3.5 text-center text-sm font-bold text-primary"
+            className="mt-5 block w-full rounded-sm bg-accent py-3.5 text-center text-sm font-bold leading-snug text-primary"
             onClick={() => setMobileOpen(false)}
           >
             無料相談する

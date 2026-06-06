@@ -14,4 +14,6 @@ body {
   background-color: #f8f7f4;
   color: #2d2d2d;
   font-family: var(--font-noto-sans-jp), sans-serif;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }

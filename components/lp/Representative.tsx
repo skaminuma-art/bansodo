@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SITE } from "@/lib/site";
+import { IMAGES, SITE } from "@/lib/site";
 
 export default function Representative() {
   return (
@@ -8,11 +8,12 @@ export default function Representative() {
       <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 sm:flex-row sm:items-start sm:gap-12">
         <div className="relative order-1 h-36 w-36 shrink-0 overflow-hidden rounded-full border-2 border-primary/10 sm:order-none sm:h-48 sm:w-48">
           <Image
-            src="/images/representative.jpg"
+            src={IMAGES.representative}
             alt={`${SITE.representative}の顔写真`}
             fill
             className="object-cover"
             sizes="(max-width: 640px) 144px, 192px"
+            priority
           />
         </div>
         <div className="order-2 text-center sm:order-none sm:text-left">
@@ -28,11 +29,12 @@ export default function Representative() {
           </p>
           <p className="mt-4 text-sm leading-7 text-text-custom/80">
             「難しいことを、わかりやすく。入れて終わりにしない。」
-            をモットーに、現場に定着するIT支援を提供している。
+            <br className="sm:hidden" />
+            をモットーに、現場に定着するIT支援を提供していきます。
           </p>
           <p className="mt-6 font-mincho text-base leading-8 text-primary sm:text-xl">
             「売って終わりにしない。
-            <br />
+            <br className="sm:hidden" />
             使いこなせるまで、一緒に走ります。」
           </p>
           <Link

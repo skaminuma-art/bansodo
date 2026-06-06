@@ -12,6 +12,7 @@ export const SITE = {
 } as const;
 
 export const IMAGES = {
+  representative: "/images/representative.jpg",
   heroTop:
     "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600",
   heroServiceDefault:

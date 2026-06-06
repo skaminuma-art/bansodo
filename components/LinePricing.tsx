@@ -37,7 +37,7 @@ export default function LinePricing() {
 
           <a
             href={SITE.lineUrl}
-            className="mt-8 block rounded-sm bg-primary py-5 text-center text-lg font-bold text-white transition-opacity hover:opacity-90"
+            className="mt-8 block rounded-sm bg-primary px-4 py-4 text-center text-sm font-bold leading-snug text-white transition-opacity hover:opacity-90 sm:py-5 sm:text-lg"
           >
             今すぐモニターに申し込む
           </a>

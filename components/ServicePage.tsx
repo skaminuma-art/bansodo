@@ -23,10 +23,10 @@ export default function ServicePage({
           <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/10">
             <Icon className="h-7 w-7 text-accent" aria-hidden="true" />
           </div>
-          <h1 className="font-mincho text-3xl font-semibold text-white sm:text-4xl">
+          <h1 className="font-mincho text-2xl font-semibold leading-relaxed text-white sm:text-4xl">
             {service.name}
           </h1>
-          <p className="mt-6 text-base leading-8 text-white/80 sm:text-lg">
+          <p className="mt-6 text-sm leading-8 text-white/80 sm:text-base sm:text-lg">
             {service.catchcopy}
           </p>
         </div>

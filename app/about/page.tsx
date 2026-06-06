@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { SITE } from "@/lib/site";
+import { IMAGES, SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "私たちについて | 伴走堂",
@@ -31,11 +31,12 @@ export default function AboutPage() {
         <div className="mx-auto flex max-w-4xl flex-col gap-10 sm:flex-row sm:gap-14">
           <div className="relative mx-auto h-80 w-64 shrink-0 overflow-hidden rounded-sm border border-primary/10 sm:mx-0 sm:h-[28rem] sm:w-72">
             <Image
-              src="/images/representative.jpg"
+              src={IMAGES.representative}
               alt={`${SITE.representative}の顔写真`}
               fill
               className="object-cover object-top"
               sizes="(max-width: 640px) 256px, 288px"
+              priority
             />
           </div>
 
@@ -50,7 +51,7 @@ export default function AboutPage() {
 
             <div className="mt-8 space-y-4 text-base leading-8 text-text-custom">
               <p>
-                営業職として複数の企業で法人営業を経験後、
+                M&A仲介・法人営業を経験後、
                 Salesforceの導入・活用支援に携わる。
               </p>
               <p>
@@ -61,7 +62,8 @@ export default function AboutPage() {
               <p>
                 Salesforce公認資格 保有。
                 「難しいことを、わかりやすく。入れて終わりにしない。」
-                をモットーに、現場に定着するIT支援を提供している。
+                <br className="sm:hidden" />
+                をモットーに、現場に定着するIT支援を提供していきます。
               </p>
             </div>
 
