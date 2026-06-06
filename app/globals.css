@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@theme inline {
+  --font-sans: var(--font-noto-sans-jp);
+  --font-serif: var(--font-shippori-mincho);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f7f4;
+  color: #2d2d2d;
+  font-family: var(--font-noto-sans-jp), sans-serif;
+}
