@@ -60,7 +60,7 @@ export const services: Record<string, ServiceData> = {
       { icon: Calendar, title: "ステップ配信・予約連携", description: "配信設計から予約・問い合わせの自動化まで。" },
       { icon: Users, title: "運用トレーニング・定着支援", description: "スタッフ全員が使えるよう、操作まで伴走します。" },
     ],
-    pricingNote: "初期費用3万円〜 ／ 月額5,000円〜（モニター価格あり）",
+    pricingNote: "初期費用3万円〜 ／ 月額5,000円〜",
     recommended: [
       "電話・メール対応に追われ、顧客対応に時間を取られている",
       "集客から予約・フォローまでを一元化したい",

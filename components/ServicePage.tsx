@@ -71,7 +71,7 @@ export default function ServicePage({
             規模や内容により変動します。まずはお気軽にご相談ください。
           </p>
           <div className="mt-8 rounded-sm border border-primary/10 bg-bg-custom px-6 py-8 text-center sm:px-10">
-            <p className="font-mincho text-xl font-semibold text-primary sm:text-2xl">
+            <p className="font-mincho text-xl font-semibold break-keep text-primary sm:text-2xl">
               {service.pricingNote}
             </p>
           </div>
@@ -87,7 +87,7 @@ export default function ServicePage({
             {service.recommended.map((item) => (
               <li
                 key={item}
-                className="flex w-full items-start gap-3 overflow-visible rounded-sm border border-primary/10 bg-white px-4 py-4 sm:px-5"
+                className="flex w-full items-start gap-3 rounded-sm border border-primary/10 bg-white px-4 py-4 sm:px-5"
               >
                 <Check
                   className="mt-0.5 h-5 w-5 shrink-0 text-accent"
@@ -118,14 +118,14 @@ export default function ServicePage({
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-primary bg-white font-mincho text-lg font-semibold text-primary">
                     {step.step}
                   </div>
-                  <div className="flex-1 rounded-sm border border-primary/10 bg-bg-custom px-5 py-5 sm:px-6">
+                  <div className="min-w-0 flex-1 rounded-sm border border-primary/10 bg-bg-custom px-5 py-5 sm:px-6">
                     <p className="text-xs font-medium tracking-widest text-accent">
                       STEP{step.step}
                     </p>
-                    <h3 className="mt-1 font-mincho text-lg font-semibold text-primary">
+                    <h3 className="mt-1 break-keep font-mincho text-lg font-semibold text-primary">
                       {step.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-7 text-text-custom/80">
+                    <p className="mt-2 break-keep text-sm leading-7 text-text-custom/80">
                       {step.description}
                     </p>
                   </div>
@@ -144,7 +144,7 @@ export default function ServicePage({
           <p className="mt-4 text-center text-sm text-text-custom/70">
             伴走堂が選ばれる理由
           </p>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
             {service.differentiators.map((item) => (
               <div
                 key={item.title}

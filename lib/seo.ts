@@ -109,6 +109,68 @@ export function localBusinessJsonLd() {
   };
 }
 
+export function siteLocalBusinessJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: SITE.name,
+    alternateName: SITE.nameEn,
+    url: SITE_URL,
+    logo: absoluteUrl(LOGO.icon),
+    description:
+      "導入して終わりにしない。Webサイト・公式LINE・CRM・AI自動化まで、現場に定着するまで伴走します。",
+    email: SITE.email,
+    telephone: SITE.phone,
+    areaServed: ["長野県松本市", "東京都", "全国（オンライン対応）"],
+    address: [
+      {
+        "@type": "PostalAddress",
+        addressLocality: "松本市",
+        addressRegion: "長野県",
+        addressCountry: "JP",
+      },
+      {
+        "@type": "PostalAddress",
+        addressLocality: "東京都",
+        addressCountry: "JP",
+      },
+    ],
+  };
+}
+
+export function faqPageJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "ITに詳しくないのですが大丈夫ですか？",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "専門用語は一切使わず、社長のビジネスの言葉でお話しします。",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "料金はどのくらいかかりますか？",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "サービスや規模によって異なります。まずは無料相談でお気軽にご連絡ください。",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "導入後のサポートはありますか？",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "月額の継続サポートプランをご用意しています。導入後も一緒に走り続けます。",
+        },
+      },
+    ],
+  };
+}
+
 export function serviceJsonLd(service: ServiceData) {
   return {
     "@context": "https://schema.org",
@@ -143,10 +205,14 @@ const SERVICE_OG_IMAGES: Record<string, string> = {
   support: IMAGES.heroServiceDefault,
 };
 
+export function getServiceDescription(service: ServiceData): string {
+  return `${service.name}の支援なら伴走堂。${service.shortDescription}長野県松本市・東京拠点、全国オンライン対応。`;
+}
+
 export function getServiceMetadata(service: ServiceData): Metadata {
   return createPageMetadata({
     title: `${service.name} | ${SITE.name}`,
-    description: `${service.shortDescription} ${service.catchcopy}`,
+    description: getServiceDescription(service),
     path: `/services/${service.slug}`,
     ogImage: SERVICE_OG_IMAGES[service.slug] ?? LOGO.icon,
     ogImageAlt: `${SITE.name} — ${service.name}`,

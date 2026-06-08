@@ -12,7 +12,7 @@ export default function CTABanner() {
           <br className="sm:hidden" />
           費用・内容、なんでもお気軽にどうぞ。
         </p>
-        <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4">
+        <div className="mt-8 flex flex-col items-center gap-4">
           <a
             href={SITE.lineUrl}
             className={`inline-flex w-full items-center justify-center gap-2 rounded-sm bg-accent px-6 py-3.5 text-sm font-bold leading-snug text-primary transition-opacity hover:opacity-90 sm:w-auto sm:px-8 sm:py-4 sm:text-base ${FOCUS_RING_ON_ACCENT}`}
@@ -24,7 +24,7 @@ export default function CTABanner() {
           </a>
           <Link
             href="/contact"
-            className={`inline-flex w-full items-center justify-center gap-2 rounded-sm border-2 border-white/40 px-6 py-3.5 text-sm font-medium leading-snug text-white transition-colors hover:bg-white/10 sm:w-auto sm:px-8 sm:py-4 sm:text-base ${FOCUS_RING_ON_DARK}`}
+            className={`inline-flex items-center gap-1.5 text-sm font-medium text-white/70 underline underline-offset-4 transition-colors hover:text-white ${FOCUS_RING_ON_DARK}`}
           >
             <Mail className="h-5 w-5 shrink-0" aria-hidden="true" />
             メールで相談する

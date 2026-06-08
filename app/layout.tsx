@@ -7,8 +7,8 @@ import { LOGO } from "@/lib/site";
 import {
   SITE_URL,
   createPageMetadata,
-  localBusinessJsonLd,
-  organizationJsonLd,
+  faqPageJsonLd,
+  siteLocalBusinessJsonLd,
 } from "@/lib/seo";
 import "./globals.css";
 
@@ -51,8 +51,11 @@ export default function RootLayout({
       lang="ja"
       className={`${shipporiMincho.variable} ${notoSansJP.variable} h-full antialiased`}
     >
+      <head>
+        <JsonLd data={siteLocalBusinessJsonLd()} />
+        <JsonLd data={faqPageJsonLd()} />
+      </head>
       <body className="flex min-h-full flex-col font-gothic text-text-custom">
-        <JsonLd data={[organizationJsonLd(), localBusinessJsonLd()]} />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

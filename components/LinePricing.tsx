@@ -22,7 +22,7 @@ export default function LinePricing() {
           </div>
 
           <div className="mt-8">
-            <p className="text-sm font-medium text-primary/70">モニター価格</p>
+            <p className="text-sm font-medium text-primary/70">特別価格</p>
             <p className="mt-1 font-mincho text-4xl font-bold text-primary sm:text-5xl">
               3万円<span className="text-lg font-normal">〜</span>
             </p>

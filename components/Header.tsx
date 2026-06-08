@@ -1,11 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { FOCUS_RING, FOCUS_RING_ON_ACCENT } from "@/lib/a11y";
-import { LOGO, SERVICES_NAV, SITE } from "@/lib/site";
+import { SERVICES_NAV, SITE } from "@/lib/site";
 
 const navLinkClass = `text-sm font-medium text-text-custom transition-colors hover:text-primary rounded-sm ${FOCUS_RING}`;
 
@@ -43,16 +42,14 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-8 sm:py-4">
         <Link
           href="/"
-          className={`flex shrink-0 items-center rounded-sm ${FOCUS_RING}`}
+          className={`flex shrink-0 flex-col items-start rounded-sm ${FOCUS_RING}`}
         >
-          <Image
-            src={LOGO.onLightBg}
-            alt="伴走堂 BANSODO"
-            width={180}
-            height={48}
-            className="h-8 w-auto sm:h-10"
-            priority
-          />
+          <span className="font-mincho text-xl font-bold tracking-wider text-primary sm:text-2xl sm:tracking-widest">
+            伴走堂
+          </span>
+          <span className="font-gothic text-[10px] tracking-[0.25em] text-primary/60 sm:text-xs sm:tracking-[0.3em]">
+            BANSODO
+          </span>
         </Link>
 
         <nav

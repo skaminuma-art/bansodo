@@ -59,13 +59,11 @@ export default function Accordion({ items, dark = false }: AccordionProps) {
               role="region"
               aria-labelledby={buttonId}
               hidden={!isOpen}
-              className={`border-t px-5 py-5 sm:px-6 ${
-                dark
-                  ? "border-white/15 bg-white/5 text-white/90"
-                  : "border-primary/10 bg-bg-custom text-text-custom"
+              className={`px-5 pb-6 sm:px-6 ${
+                dark ? "text-white/80" : "text-text-custom/80"
               }`}
             >
-              <p className="leading-7">A. {item.answer}</p>
+              <p className="text-sm leading-7">A. {item.answer}</p>
             </div>
           </div>
         );

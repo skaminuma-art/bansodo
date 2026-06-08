@@ -9,6 +9,8 @@ export const SITE = {
   lineUrl: "https://lin.ee/8vZs4DQ",
   xUrl: "#",
   noteUrl: "#",
+  bases: ["長野県松本市", "東京"] as const,
+  areaNote: "全国オンライン対応" as const,
 } as const;
 
 export const LOGO = {
