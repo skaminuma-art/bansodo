@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import JsonLd from "@/components/JsonLd";
 import { IMAGES, SITE } from "@/lib/site";
+import { SITE_URL, aboutMetadata, organizationJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "私たちについて | 伴走堂",
-  description: "伴走堂代表・上沼将太朗のプロフィールと経歴をご紹介します。",
-};
+export const metadata: Metadata = aboutMetadata;
 
 const qualifications = [
   "Salesforce認定アドミニストレーター",
@@ -14,8 +13,21 @@ const qualifications = [
 ];
 
 export default function AboutPage() {
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: SITE.representative,
+    jobTitle: SITE.title,
+    worksFor: {
+      "@id": `${SITE_URL}/#organization`,
+    },
+    image: `${SITE_URL}${IMAGES.representative}`,
+    url: `${SITE_URL}/about`,
+  };
+
   return (
     <>
+      <JsonLd data={[organizationJsonLd(), personJsonLd]} />
       <section className="bg-primary px-5 py-16 sm:px-8 sm:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="font-mincho text-3xl font-semibold text-white sm:text-4xl">

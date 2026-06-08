@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import ServicePage from "@/components/ServicePage";
+import JsonLd from "@/components/JsonLd";
 import { services } from "@/lib/services";
+import { getServiceMetadata, serviceJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Webサイト制作 | 伴走堂",
-  description: services.website.catchcopy,
-};
+const service = services.website;
+
+export const metadata: Metadata = getServiceMetadata(service);
 
 export default function WebsitePage() {
-  return <ServicePage service={services.website} />;
+  return (
+    <>
+      <JsonLd data={serviceJsonLd(service)} />
+      <ServicePage service={service} />
+    </>
+  );
 }

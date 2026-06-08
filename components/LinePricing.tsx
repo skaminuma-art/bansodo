@@ -1,3 +1,4 @@
+import { FOCUS_RING_ON_DARK } from "@/lib/a11y";
 import { SITE } from "@/lib/site";
 
 export default function LinePricing() {
@@ -29,15 +30,17 @@ export default function LinePricing() {
           </div>
 
           <div className="mt-6 border-t border-primary/15 pt-6">
-            <p className="text-sm text-primary/50">通常価格</p>
-            <p className="mt-1 text-xl text-primary/40 line-through">
+            <p className="text-sm text-primary/70">通常価格</p>
+            <p className="mt-1 text-xl text-primary/60 line-through">
               10万円〜 ＋ 月額 5,000円〜
             </p>
           </div>
 
           <a
             href={SITE.lineUrl}
-            className="mt-8 block rounded-sm bg-primary px-4 py-4 text-center text-sm font-bold leading-snug text-white transition-opacity hover:opacity-90 sm:py-5 sm:text-lg"
+            className={`mt-8 block rounded-sm bg-primary px-4 py-4 text-center text-sm font-bold leading-snug text-white transition-opacity hover:opacity-90 sm:py-5 sm:text-lg ${FOCUS_RING_ON_DARK}`}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             今すぐモニターに申し込む
           </a>

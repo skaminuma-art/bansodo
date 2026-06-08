@@ -2,7 +2,10 @@
 
 import { FormEvent, useState } from "react";
 import { CheckCircle, Mail, MessageCircle, Phone, Send } from "lucide-react";
+import { FOCUS_RING, FOCUS_RING_ON_ACCENT } from "@/lib/a11y";
 import { SITE } from "@/lib/site";
+
+const inputClass = `mt-2 w-full rounded-sm border border-primary/20 bg-bg-custom px-4 py-3 text-base transition-colors focus:border-primary/50 disabled:opacity-60 ${FOCUS_RING}`;
 
 type FormData = {
   name: string;
@@ -63,7 +66,9 @@ export default function ContactPage() {
           <div className="text-center">
             <a
               href={SITE.lineUrl}
-              className="inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-sm bg-accent px-8 py-4 text-base font-bold leading-snug text-primary transition-opacity hover:opacity-90 sm:w-auto sm:px-10 sm:py-5 sm:text-xl"
+              className={`inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-sm bg-accent px-8 py-4 text-base font-bold leading-snug text-primary transition-opacity hover:opacity-90 sm:w-auto sm:px-10 sm:py-5 sm:text-xl ${FOCUS_RING_ON_ACCENT}`}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <MessageCircle className="h-6 w-6" aria-hidden="true" />
               LINEで気軽に相談する
@@ -73,14 +78,14 @@ export default function ContactPage() {
           <div className="mt-8 flex flex-col items-center gap-3 text-sm text-text-custom/70">
             <a
               href={`mailto:${SITE.email}`}
-              className="flex items-center gap-2 hover:text-primary"
+              className={`flex items-center gap-2 rounded-sm hover:text-primary ${FOCUS_RING}`}
             >
               <Mail className="h-4 w-4 text-accent" aria-hidden="true" />
               {SITE.email}
             </a>
             <a
               href={`tel:${SITE.phone}`}
-              className="flex items-center gap-2 hover:text-primary"
+              className={`flex items-center gap-2 rounded-sm hover:text-primary ${FOCUS_RING}`}
             >
               <Phone className="h-4 w-4 text-accent" aria-hidden="true" />
               {SITE.phone}
@@ -110,7 +115,7 @@ export default function ContactPage() {
               <button
                 type="button"
                 onClick={() => setStatus("idle")}
-                className="mt-6 text-sm font-medium text-primary underline-offset-4 hover:underline"
+                className={`mt-6 rounded-sm text-sm font-medium text-primary underline-offset-4 hover:underline ${FOCUS_RING}`}
               >
                 別のお問い合わせを送る
               </button>
@@ -145,7 +150,7 @@ export default function ContactPage() {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="mt-2 w-full rounded-sm border border-primary/20 bg-bg-custom px-4 py-3 text-base outline-none transition-colors focus:border-primary/50 disabled:opacity-60"
+                  className={inputClass}
                   placeholder="山田 太郎"
                 />
               </div>
@@ -166,7 +171,7 @@ export default function ContactPage() {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="mt-2 w-full rounded-sm border border-primary/20 bg-bg-custom px-4 py-3 text-base outline-none transition-colors focus:border-primary/50 disabled:opacity-60"
+                  className={inputClass}
                   placeholder="example@email.com"
                 />
               </div>
@@ -187,7 +192,7 @@ export default function ContactPage() {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="mt-2 w-full resize-y rounded-sm border border-primary/20 bg-bg-custom px-4 py-3 text-base outline-none transition-colors focus:border-primary/50 disabled:opacity-60"
+                  className={`${inputClass} resize-y`}
                   placeholder="ご相談内容をお聞かせください"
                 />
               </div>
@@ -195,7 +200,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-sm border-2 border-primary px-8 py-4 text-base font-medium leading-snug text-primary transition-colors hover:bg-primary/5 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+                className={`inline-flex w-full items-center justify-center gap-2 rounded-sm border-2 border-primary px-8 py-4 text-base font-medium leading-snug text-primary transition-colors hover:bg-primary/5 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto ${FOCUS_RING}`}
               >
                 <Send className="h-5 w-5" aria-hidden="true" />
                 {status === "loading" ? "送信中..." : "メールで問い合わせる"}

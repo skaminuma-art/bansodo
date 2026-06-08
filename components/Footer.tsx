@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { NotebookPen, X } from "lucide-react";
+import { FOCUS_RING_ON_DARK } from "@/lib/a11y";
 import { SITE, SERVICES_NAV } from "@/lib/site";
+
+const footerLinkClass = `transition-colors hover:text-white rounded-sm ${FOCUS_RING_ON_DARK}`;
 
 export default function Footer() {
   return (
@@ -15,14 +18,14 @@ export default function Footer() {
           <div className="mt-6 flex items-center justify-center gap-4 sm:justify-start">
             <a
               href={SITE.xUrl}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:bg-white/10"
+              className={`flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:bg-white/10 ${FOCUS_RING_ON_DARK}`}
               aria-label="X（旧Twitter）"
             >
               <X className="h-4 w-4" aria-hidden="true" />
             </a>
             <a
               href={SITE.noteUrl}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:bg-white/10"
+              className={`flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:bg-white/10 ${FOCUS_RING_ON_DARK}`}
               aria-label="Note"
             >
               <NotebookPen className="h-4 w-4" aria-hidden="true" />
@@ -37,7 +40,7 @@ export default function Footer() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-sm transition-colors hover:text-white"
+                  className={`text-sm ${footerLinkClass}`}
                 >
                   {item.label}
                 </Link>
@@ -51,12 +54,12 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li>代表：{SITE.representative}</li>
             <li>
-              <a href={`mailto:${SITE.email}`} className="hover:text-white">
+              <a href={`mailto:${SITE.email}`} className={footerLinkClass}>
                 {SITE.email}
               </a>
             </li>
             <li>
-              <a href={`tel:${SITE.phone}`} className="hover:text-white">
+              <a href={`tel:${SITE.phone}`} className={footerLinkClass}>
                 {SITE.phone}
               </a>
             </li>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { FOCUS_RING } from "@/lib/a11y";
 import { SERVICE_CARDS, services } from "@/lib/services";
 
 export default function ServiceCards() {
@@ -30,7 +31,7 @@ export default function ServiceCards() {
                 </p>
                 <Link
                   href={href}
-                  className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-accent"
+                  className={`mt-4 inline-flex items-center gap-1 rounded-sm text-sm font-medium text-primary transition-colors hover:text-accent ${FOCUS_RING}`}
                 >
                   詳しく見る
                   <ArrowRight className="h-4 w-4 shrink-0" aria-hidden="true" />

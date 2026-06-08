@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, MessageCircle } from "lucide-react";
+import { FOCUS_RING_ON_ACCENT, FOCUS_RING_ON_DARK } from "@/lib/a11y";
 import { SITE } from "@/lib/site";
 
 export default function CTABanner() {
@@ -14,14 +15,16 @@ export default function CTABanner() {
         <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4">
           <a
             href={SITE.lineUrl}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-accent px-6 py-3.5 text-sm font-bold leading-snug text-primary transition-opacity hover:opacity-90 sm:w-auto sm:px-8 sm:py-4 sm:text-base"
+            className={`inline-flex w-full items-center justify-center gap-2 rounded-sm bg-accent px-6 py-3.5 text-sm font-bold leading-snug text-primary transition-opacity hover:opacity-90 sm:w-auto sm:px-8 sm:py-4 sm:text-base ${FOCUS_RING_ON_ACCENT}`}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <MessageCircle className="h-5 w-5 shrink-0" aria-hidden="true" />
             LINEで相談する
           </a>
           <Link
             href="/contact"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-sm border-2 border-white/40 px-6 py-3.5 text-sm font-medium leading-snug text-white transition-colors hover:bg-white/10 sm:w-auto sm:px-8 sm:py-4 sm:text-base"
+            className={`inline-flex w-full items-center justify-center gap-2 rounded-sm border-2 border-white/40 px-6 py-3.5 text-sm font-medium leading-snug text-white transition-colors hover:bg-white/10 sm:w-auto sm:px-8 sm:py-4 sm:text-base ${FOCUS_RING_ON_DARK}`}
           >
             <Mail className="h-5 w-5 shrink-0" aria-hidden="true" />
             メールで相談する

@@ -1,3 +1,4 @@
+import ScrollReveal from "@/components/ScrollReveal";
 import Hero from "@/components/lp/Hero";
 import Problems from "@/components/lp/Problems";
 import ServiceCards from "@/components/lp/ServiceCards";
@@ -12,16 +13,36 @@ import ContactSection from "@/components/lp/ContactSection";
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Problems />
-      <ServiceCards />
-      <Philosophy />
-      <Representative />
-      <Monitor />
-      <Testimonials />
-      <Cases />
-      <FAQ />
-      <ContactSection />
+      <ScrollReveal immediate>
+        <Hero />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Problems />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ServiceCards />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Philosophy />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Representative />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Monitor />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Testimonials />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Cases />
+      </ScrollReveal>
+      <ScrollReveal>
+        <FAQ />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ContactSection />
+      </ScrollReveal>
     </>
   );
 }

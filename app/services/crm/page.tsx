@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import ServicePage from "@/components/ServicePage";
+import JsonLd from "@/components/JsonLd";
 import { services } from "@/lib/services";
+import { getServiceMetadata, serviceJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "CRM導入・定着支援 | 伴走堂",
-  description: services.crm.catchcopy,
-};
+const service = services.crm;
+
+export const metadata: Metadata = getServiceMetadata(service);
 
 export default function CrmPage() {
-  return <ServicePage service={services.crm} />;
+  return (
+    <>
+      <JsonLd data={serviceJsonLd(service)} />
+      <ServicePage service={service} />
+    </>
+  );
 }

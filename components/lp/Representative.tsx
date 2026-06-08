@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FOCUS_RING } from "@/lib/a11y";
 import { IMAGES, SITE } from "@/lib/site";
 
 export default function Representative() {
@@ -24,7 +25,7 @@ export default function Representative() {
             {SITE.representative}
           </h2>
           <p className="mt-2 text-sm text-text-custom/70">{SITE.title}</p>
-          <p className="mt-1 text-sm text-text-custom/60">
+          <p className="mt-1 text-sm text-text-custom/70">
             Salesforce公認資格 保有
           </p>
           <p className="mt-4 text-sm leading-7 text-text-custom/80">
@@ -39,7 +40,7 @@ export default function Representative() {
           </p>
           <Link
             href="/about"
-            className="mt-6 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
+            className={`mt-6 inline-block rounded-sm text-sm font-medium text-primary underline-offset-4 hover:underline ${FOCUS_RING}`}
           >
             プロフィールを見る →
           </Link>

@@ -1,7 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import {
   Bot,
-  Building2,
   Headphones,
   LineChart,
   MessageCircle,
@@ -29,6 +28,11 @@ export type ServiceFeature = {
   description: string;
 };
 
+export type ServiceDifferentiator = {
+  title: string;
+  description: string;
+};
+
 export type ServiceData = {
   slug: string;
   name: string;
@@ -36,7 +40,10 @@ export type ServiceData = {
   catchcopy: string;
   icon: LucideIcon;
   features: ServiceFeature[];
+  pricingNote: string;
   recommended: string[];
+  differentiators: ServiceDifferentiator[];
+  tools?: string[];
   faqs: { question: string; answer: string }[];
 };
 
@@ -53,11 +60,19 @@ export const services: Record<string, ServiceData> = {
       { icon: Calendar, title: "ステップ配信・予約連携", description: "配信設計から予約・問い合わせの自動化まで。" },
       { icon: Users, title: "運用トレーニング・定着支援", description: "スタッフ全員が使えるよう、操作まで伴走します。" },
     ],
+    pricingNote: "初期費用3万円〜 ／ 月額5,000円〜（モニター価格あり）",
     recommended: [
       "電話・メール対応に追われ、顧客対応に時間を取られている",
       "集客から予約・フォローまでを一元化したい",
       "ITは苦手だが、スマホのLINEは日常的に使っている",
     ],
+    differentiators: [
+      { title: "納品後も運用定着まで伴走", description: "アカウントを渡して終わりにせず、スタッフ全員が使えるまでサポートします。" },
+      { title: "専門用語を使わない設計", description: "社長のビジネスの言葉でヒアリングし、現場が迷わない導線だけを作ります。" },
+      { title: "スマホだけで運用可能", description: "PCが苦手でも、日常使いのLINE感覚で更新・配信できる仕組みにします。" },
+      { title: "小さく始めて育てる", description: "いきなり高機能を入れず、まず動くところから段階的に拡張します。" },
+    ],
+    tools: ["LINE公式アカウント", "Lステップ", "プロライン", "エルメ"],
     faqs: [
       { question: "LINE公式アカウントの開設からお願いできますか？", answer: "はい、開設手続きから初期設定、運用設計まで全て対応します。" },
       { question: "既存のLINEアカウントを活用できますか？", answer: "既存アカウントの活用・移行も可能です。まずは現状をお聞かせください。" },
@@ -76,11 +91,19 @@ export const services: Record<string, ServiceData> = {
       { icon: Smartphone, title: "スマホ最適化", description: "モバイルファーストで、どの端末でも美しく表示。" },
       { icon: Search, title: "SEO基本設定", description: "検索されやすい基本設定を標準で行います。" },
     ],
+    pricingNote: "初期費用15万円〜 ／ 月額10,000円〜",
     recommended: [
       "ホームページがない、または古くなっている",
       "信頼感のあるWebサイトで新規顧客を獲得したい",
       "自分で更新できるシンプルなサイトが欲しい",
     ],
+    differentiators: [
+      { title: "和モダンで信頼感のあるデザイン", description: "テンプレートの寄せ集めではなく、御社の品格に合った世界観を丁寧に設計します。" },
+      { title: "取材・ライティング支援", description: "文章や写真がなくても、一緒にコンテンツを作り上げます。" },
+      { title: "公開後の更新サポート", description: "作って終わりにせず、更新方法のレクチャーと継続サポートを提供します。" },
+      { title: "スマホ最適化を標準対応", description: "お客様の多くがスマホで見る前提で、最初から設計します。" },
+    ],
+    tools: ["Next.js", "WordPress", "microCMS", "Google Analytics"],
     faqs: [
       { question: "制作期間はどのくらいですか？", answer: "規模によりますが、通常1〜2ヶ月程度です。お急ぎの場合もご相談ください。" },
       { question: "文章や写真の用意は必要ですか？", answer: "お持ちでない場合も、取材・ライティングのサポートが可能です。" },
@@ -99,11 +122,19 @@ export const services: Record<string, ServiceData> = {
       { icon: BarChart3, title: "投稿・分析レポート", description: "定期的な投稿と効果測定を継続的に実施。" },
       { icon: Search, title: "地域キーワード対策", description: "地域名×業種で上位表示を目指す施策を設計。" },
     ],
+    pricingNote: "月額3万円〜（初期費用別）",
     recommended: [
       "実店舗・地域ビジネスで集客したい",
       "Googleマップでの表示順位を上げたい",
       "口コミの管理方法がわからない",
     ],
+    differentiators: [
+      { title: "口コミ獲得の仕組みづくり", description: "ただ返信するだけでなく、口コミが自然に増える導線を設計します。" },
+      { title: "地域キーワードに特化", description: "「地域名×業種」で選ばれるためのプロフィール最適化を行います。" },
+      { title: "数字で効果を見える化", description: "検索表示回数・ルート検索数など、わかりやすいレポートで共有します。" },
+      { title: "継続伴走で順位を維持", description: "一度上げて終わりにせず、投稿・改善を継続的にサポートします。" },
+    ],
+    tools: ["Googleビジネスプロフィール", "Google Maps", "Google Search Console"],
     faqs: [
       { question: "MEOとSEOの違いは何ですか？", answer: "MEOはGoogleマップ等の地図検索での表示改善、SEOはWeb検索全体の対策です。" },
       { question: "効果が出るまでどのくらいかかりますか？", answer: "通常1〜3ヶ月で変化を実感いただくケースが多いです。" },
@@ -122,11 +153,19 @@ export const services: Record<string, ServiceData> = {
       { icon: Zap, title: "投稿自動化の仕組み構築", description: "AIを活用した下書き生成・予約投稿を導入。" },
       { icon: BarChart3, title: "効果測定・改善", description: "データを見ながら、継続的に運用を改善します。" },
     ],
+    pricingNote: "月額5万円〜（初期設計費用別）",
     recommended: [
       "SNSを始めたいが、何を投稿すればいいかわからない",
       "投稿が続かず、運用が止まってしまう",
       "SNS集客の効果を数字で把握したい",
     ],
+    differentiators: [
+      { title: "投稿ネタの枯渇を防ぐ設計", description: "カレンダー型の運用設計で、ネタ切れしない仕組みを作ります。" },
+      { title: "AI活用で工数を削減", description: "下書き生成・予約投稿で、少人数でも続けられる運用にします。" },
+      { title: "数字を見ながら改善", description: "いいね数だけでなく、問い合わせにつながる指標を一緒に追います。" },
+      { title: "御社に合ったSNS選定", description: "全てのSNSをやるのではなく、成果が出やすい媒体に絞ります。" },
+    ],
+    tools: ["Instagram", "Facebook", "X（Twitter）", "Canva", "Buffer"],
     faqs: [
       { question: "どのSNSに対応していますか？", answer: "Instagram、Facebook、X（旧Twitter）等、主要SNSに対応しています。" },
       { question: "投稿の代行もお願いできますか？", answer: "運用代行プランもご用意しています。まずはご相談ください。" },
@@ -145,11 +184,19 @@ export const services: Record<string, ServiceData> = {
       { icon: Users, title: "データ移行・初期設定", description: "既存データの整理と移行を丁寧にサポート。" },
       { icon: HeartHandshake, title: "定着トレーニング", description: "全員が使えるよう、現場に入って伴走します。" },
     ],
+    pricingNote: "初期費用30万円〜 ／ 月額3万円〜",
     recommended: [
       "顧客情報がExcelや個人メモに散らばっている",
       "CRMを導入したが、社員が使わずに終わっている",
       "営業の属人化を解消し、チームで顧客管理したい",
     ],
+    differentiators: [
+      { title: "定着支援が最大の強み", description: "導入して終わりにせず、全員が使えるまで現場に入って伴走します。" },
+      { title: "御社に最適なCRM選定", description: "Salesforce一択にせず、規模と予算に合ったツールを提案します。" },
+      { title: "Excelからの移行支援", description: "散らばったデータの整理・クレンジングから丁寧に対応します。" },
+      { title: "Salesforce公認資格保持", description: "技術的な設定・カスタマイズも安心してお任せいただけます。" },
+    ],
+    tools: ["Salesforce", "HubSpot", "kintone", "Zoho CRM"],
     faqs: [
       { question: "どのCRMが合うかわかりません。", answer: "業務規模・予算・使い方をヒアリングし、最適なツールをご提案します。" },
       { question: "既存のExcelデータは移行できますか？", answer: "はい、データの整理・クレンジングから移行まで対応します。" },
@@ -168,11 +215,19 @@ export const services: Record<string, ServiceData> = {
       { icon: Zap, title: "ワークフロー構築", description: "日報作成、メール返信、データ入力等を自動化。" },
       { icon: HeartHandshake, title: "運用定着支援", description: "導入後も使い続けられるよう伴走します。" },
     ],
+    pricingNote: "初期費用20万円〜 ／ 月額3万円〜",
     recommended: [
       "毎日同じ作業の繰り返しに時間を取られている",
       "AIに興味はあるが、何に使えばいいかわからない",
       "人手不足で、業務効率化が急務",
     ],
+    differentiators: [
+      { title: "現場目線の業務設計", description: "最新AIを入れるのではなく、本当に効く業務から自動化します。" },
+      { title: "小さく試して拡張", description: "1つの業務で効果を確認してから、次の自動化に広げます。" },
+      { title: "セキュリティに配慮", description: "機密情報の扱いを整理し、安全な運用ルールを一緒に作ります。" },
+      { title: "導入後の定着支援", description: "ツールを渡すだけでなく、日常業務に組み込むまで伴走します。" },
+    ],
+    tools: ["ChatGPT", "Claude", "Make", "Zapier", "Dify"],
     faqs: [
       { question: "AIに詳しくなくても大丈夫ですか？", answer: "専門用語は使わず、御社の業務に合った形でご提案します。" },
       { question: "どんな業務が自動化できますか？", answer: "メール対応、データ入力作業、レポート作成、SNS投稿など幅広く対応可能です。" },
@@ -191,11 +246,19 @@ export const services: Record<string, ServiceData> = {
       { icon: FileText, title: "求人原稿ライティング", description: "応募したくなる求人票の作成をサポート。" },
       { icon: LineChart, title: "応募導線の最適化", description: "応募までの導線をシンプルに設計します。" },
     ],
+    pricingNote: "初期費用20万円〜 ／ 月額10,000円〜",
     recommended: [
       "求人を出しても応募が来ない",
       "会社の魅力をうまく伝えられていない",
       "採用専用のWebサイトを持っていない",
     ],
+    differentiators: [
+      { title: "社員の声を軸にした設計", description: "会社紹介だけでなく、働く人のリアルな声を前面に出します。" },
+      { title: "応募導線のシンプル化", description: "応募までのステップを最小限にし、離脱を防ぎます。" },
+      { title: "取材・ライティング対応", description: "インタビュー取材から文章化まで、一貫してサポートします。" },
+      { title: "コーポレートサイトとの連携", description: "既存サイトと役割分担しながら、採用ブランドを強化します。" },
+    ],
+    tools: ["Indeed", "Wantedly", "Green", "求人ボックス"],
     faqs: [
       { question: "コーポレートサイトとは別に作れますか？", answer: "はい、採用特化サイトとして独立して制作することも可能です。" },
       { question: "求人媒体への掲載もお願いできますか？", answer: "原稿作成のサポートは可能です。掲載代行についてはご相談ください。" },
@@ -214,10 +277,17 @@ export const services: Record<string, ServiceData> = {
       { icon: Users, title: "スタッフ追加トレーニング", description: "新入社員への引き継ぎ・操作研修も実施。" },
       { icon: LineChart, title: "効果測定・改善提案", description: "数字を見ながら、継続的に改善を提案します。" },
     ],
+    pricingNote: "月額3万円〜（サポート内容により変動）",
     recommended: [
       "導入したシステムを継続的に改善したい",
       "社内にIT担当者がいない",
       "トラブル時にすぐ相談できるパートナーが欲しい",
+    ],
+    differentiators: [
+      { title: "専任の伴走パートナー", description: "担当が変わらず、御社の状況を理解した上で継続支援します。" },
+      { title: "月次定例で課題を共有", description: "定期的に状況を確認し、改善施策を一緒に決めます。" },
+      { title: "他社導入ツールも相談可", description: "伴走堂以外で導入したシステムも、まずはご相談ください。" },
+      { title: "スポット対応も可能", description: "月額契約前に、単発の相談・トラブル対応も承ります。" },
     ],
     faqs: [
       { question: "月額料金はいくらですか？", answer: "サポート内容により異なります。まずは無料相談でご要望をお聞かせください。" },

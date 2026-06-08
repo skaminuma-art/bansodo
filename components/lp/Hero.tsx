@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Mail, MessageCircle } from "lucide-react";
+import { FOCUS_RING, FOCUS_RING_ON_ACCENT, FOCUS_RING_ON_DARK } from "@/lib/a11y";
 import { IMAGES, SITE } from "@/lib/site";
 
 export default function Hero() {
@@ -8,7 +9,7 @@ export default function Hero() {
     <section className="relative bg-primary px-5 py-16 sm:px-8 sm:py-28 lg:py-36">
       <div className="mx-auto max-w-6xl lg:grid lg:grid-cols-2 lg:items-center lg:gap-14">
         <div className="text-center lg:text-left">
-          <p className="mb-4 text-xs font-medium tracking-[0.2em] text-white/50 sm:text-sm">
+          <p className="mb-4 text-xs font-medium tracking-[0.2em] text-white/70 sm:text-sm">
             {SITE.nameEn}
           </p>
           <h1 className="font-mincho text-[1.375rem] font-semibold leading-snug tracking-wide text-white sm:text-4xl sm:leading-tight lg:text-6xl lg:whitespace-nowrap">
@@ -24,14 +25,16 @@ export default function Hero() {
           <div className="mt-8 flex flex-col items-center gap-4 sm:mt-10 lg:items-start">
             <a
               href={SITE.lineUrl}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-accent px-6 py-3.5 text-sm font-bold leading-snug text-primary transition-opacity hover:opacity-90 sm:w-auto sm:px-10 sm:py-5 sm:text-lg"
+              className={`inline-flex w-full items-center justify-center gap-2 rounded-sm bg-accent px-6 py-3.5 text-sm font-bold leading-snug text-primary transition-opacity hover:opacity-90 sm:w-auto sm:px-10 sm:py-5 sm:text-lg ${FOCUS_RING_ON_ACCENT}`}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <MessageCircle className="h-5 w-5 shrink-0" aria-hidden="true" />
               LINEで気軽に相談する
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1.5 text-sm text-white/70 underline underline-offset-4 transition-colors hover:text-white sm:text-base"
+              className={`inline-flex items-center gap-1.5 rounded-sm text-sm text-white/80 underline underline-offset-4 transition-colors hover:text-white sm:text-base ${FOCUS_RING_ON_DARK}`}
             >
               <Mail className="h-4 w-4 shrink-0" aria-hidden="true" />
               メールで問い合わせる

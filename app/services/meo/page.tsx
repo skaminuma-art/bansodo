@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import ServicePage from "@/components/ServicePage";
+import JsonLd from "@/components/JsonLd";
 import { services } from "@/lib/services";
+import { getServiceMetadata, serviceJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "MEO対策 | 伴走堂",
-  description: services.meo.catchcopy,
-};
+const service = services.meo;
+
+export const metadata: Metadata = getServiceMetadata(service);
 
 export default function MeoPage() {
-  return <ServicePage service={services.meo} />;
+  return (
+    <>
+      <JsonLd data={serviceJsonLd(service)} />
+      <ServicePage service={service} />
+    </>
+  );
 }

@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import ServicePage from "@/components/ServicePage";
+import JsonLd from "@/components/JsonLd";
 import { services } from "@/lib/services";
+import { getServiceMetadata, serviceJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "採用サイト制作 | 伴走堂",
-  description: services.recruitment.catchcopy,
-};
+const service = services.recruitment;
+
+export const metadata: Metadata = getServiceMetadata(service);
 
 export default function RecruitmentPage() {
-  return <ServicePage service={services.recruitment} />;
+  return (
+    <>
+      <JsonLd data={serviceJsonLd(service)} />
+      <ServicePage service={service} />
+    </>
+  );
 }

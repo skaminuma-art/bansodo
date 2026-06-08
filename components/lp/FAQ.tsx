@@ -30,9 +30,16 @@ const faqItems = [
 
 export default function FAQ() {
   return (
-    <section className="bg-bg-custom px-5 py-16 sm:px-8 sm:py-20">
+    <section
+      id="faq"
+      aria-labelledby="faq-heading"
+      className="bg-bg-custom px-5 py-16 sm:px-8 sm:py-20"
+    >
       <div className="mx-auto max-w-3xl">
-        <h2 className="text-center font-mincho text-2xl font-semibold text-primary sm:text-3xl">
+        <h2
+          id="faq-heading"
+          className="text-center font-mincho text-2xl font-semibold text-primary sm:text-3xl"
+        >
           よくあるご質問
         </h2>
         <div className="mt-10">

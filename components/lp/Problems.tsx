@@ -20,7 +20,7 @@ export default function Problems() {
               className="flex w-full items-start gap-3 overflow-visible rounded-sm border border-primary/10 bg-white px-4 py-5 sm:gap-4 sm:px-6"
             >
               <AlertCircle
-                className="mt-0.5 h-5 w-5 shrink-0 text-primary/50"
+                className="mt-0.5 h-5 w-5 shrink-0 text-primary/70"
                 aria-hidden="true"
               />
               <p className="min-w-0 flex-1 whitespace-normal break-words text-base leading-7 text-text-custom">

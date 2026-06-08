@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
+import { contactMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "お問い合わせ | 伴走堂",
-  description:
-    "伴走堂へのお問い合わせはこちら。費用・内容、なんでもお気軽にご相談ください。",
-};
+export const metadata: Metadata = contactMetadata;
 
 export default function ContactLayout({
   children,
