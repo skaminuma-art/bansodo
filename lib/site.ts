@@ -11,6 +11,15 @@ export const SITE = {
   noteUrl: "#",
 } as const;
 
+export const LOGO = {
+  /** 明るい背景（ヘッダー等）用・紺ロゴ */
+  onLightBg: "/images/logo-dark.jpg",
+  /** 暗い背景用・白ロゴ（将来のダークヘッダー向け） */
+  onDarkBg: "/images/logo-white.jpg",
+  /** favicon・OGP用アイコン */
+  icon: "/images/logo-icon.jpg",
+} as const;
+
 export const IMAGES = {
   representative: "/images/representative.jpg",
   heroTop:

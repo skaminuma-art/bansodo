@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP, Shippori_Mincho } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { LOGO } from "@/lib/site";
 import "./globals.css";
 
 const shipporiMincho = Shippori_Mincho({
@@ -21,6 +22,10 @@ export const metadata: Metadata = {
   title: "伴走堂 | 中小企業の伴走型IT支援",
   description:
     "導入して終わりにしない。Webサイト・公式LINE・CRM・AI自動化まで、現場に定着するまで伴走します。",
+  icons: {
+    icon: LOGO.icon,
+    apple: LOGO.icon,
+  },
   openGraph: {
     title: "伴走堂 | 中小企業の伴走型IT支援",
     description:
@@ -29,6 +34,14 @@ export const metadata: Metadata = {
     siteName: "伴走堂",
     locale: "ja_JP",
     type: "website",
+    images: [
+      {
+        url: `https://bansodo.jp${LOGO.icon}`,
+        width: 512,
+        height: 512,
+        alt: "伴走堂 BANSODO",
+      },
+    ],
   },
 };
 

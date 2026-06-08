@@ -1,9 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { SERVICES_NAV, SITE } from "@/lib/site";
+import { LOGO, SERVICES_NAV, SITE } from "@/lib/site";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -12,13 +13,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-primary/10 bg-bg-custom/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-8 sm:py-4">
-        <Link href="/" className="flex shrink-0 flex-col items-start">
-          <span className="font-mincho text-xl font-bold tracking-wider text-primary sm:text-2xl sm:tracking-widest">
-            {SITE.name}
-          </span>
-          <span className="font-gothic text-[10px] tracking-[0.25em] text-primary/60 sm:text-xs sm:tracking-[0.3em]">
-            {SITE.nameEn}
-          </span>
+        <Link href="/" className="flex shrink-0 items-center">
+          <Image
+            src={LOGO.onLightBg}
+            alt="伴走堂 BANSODO"
+            width={180}
+            height={48}
+            className="h-8 w-auto sm:h-10"
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
