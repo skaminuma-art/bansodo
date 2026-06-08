@@ -6,7 +6,7 @@ export const SITE = {
   title: "代表 / ITコンサルタント",
   email: "info@bansodo.jp",
   phone: "070-8505-3216",
-  lineUrl: "#",
+  lineUrl: "https://lin.ee/8vZs4DQ",
   xUrl: "#",
   noteUrl: "#",
 } as const;
