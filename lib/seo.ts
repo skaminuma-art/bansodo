@@ -234,3 +234,12 @@ export const contactMetadata = createPageMetadata({
   ogImage: LOGO.icon,
   ogImageAlt: `${SITE.name} お問い合わせ`,
 });
+
+export const salonPackageMetadata = createPageMetadata({
+  title: `サロン向けスペシャルパッケージ | ${SITE.name}`,
+  description:
+    "美容室・理容室・トリマー向け。ホームページ×公式LINE×自動化でリピーター獲得を仕組み化。モニター3店舗限定・半額でご提供中。",
+  path: "/salon-package",
+  ogImage: IMAGES.heroLine,
+  ogImageAlt: `${SITE.name} サロン向けスペシャルパッケージ`,
+});

@@ -8,6 +8,8 @@ import { SERVICES_NAV, SITE } from "@/lib/site";
 
 const navLinkClass = `text-sm font-medium text-text-custom transition-colors hover:text-primary rounded-sm ${FOCUS_RING}`;
 
+const salonNavLinkClass = `text-sm font-semibold text-accent transition-colors hover:text-primary rounded-sm ${FOCUS_RING}`;
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -101,6 +103,9 @@ export default function Header() {
           <Link href="/contact" className={navLinkClass}>
             お問い合わせ
           </Link>
+          <Link href="/salon-package" className={salonNavLinkClass}>
+            🔥 サロン向けパッケージ
+          </Link>
           <a
             href={SITE.lineUrl}
             className={`rounded-sm bg-accent px-5 py-2.5 text-sm font-bold text-primary transition-opacity hover:opacity-90 ${FOCUS_RING_ON_ACCENT}`}
@@ -166,6 +171,15 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
               >
                 お問い合わせ
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/salon-package"
+                className={`block rounded-sm py-2.5 text-sm font-semibold text-accent ${FOCUS_RING}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                🔥 サロン向けパッケージ
               </Link>
             </li>
           </ul>

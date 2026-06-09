@@ -1,6 +1,7 @@
 import Hero from "@/components/lp/Hero";
 import Problems from "@/components/lp/Problems";
 import ServiceCards from "@/components/lp/ServiceCards";
+import SalonPackageBanner from "@/components/lp/SalonPackageBanner";
 import Philosophy from "@/components/lp/Philosophy";
 import Representative from "@/components/lp/Representative";
 import Testimonials from "@/components/lp/Testimonials";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Problems />
       <ServiceCards />
+      <SalonPackageBanner />
       <Philosophy />
       <Representative />
       <Testimonials />
