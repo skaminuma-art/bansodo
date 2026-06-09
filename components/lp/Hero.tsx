@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CheckCircle2, Globe, MapPin, MessageCircle } from "lucide-react";
+import HeroSalonBanner from "@/components/lp/HeroSalonBanner";
 import { FOCUS_RING_ON_ACCENT, FOCUS_RING_ON_DARK } from "@/lib/a11y";
 import { SITE } from "@/lib/site";
 
@@ -22,36 +23,40 @@ export default function Hero() {
 
       <div className="pointer-events-none absolute top-0 bottom-0 left-11 hidden w-px bg-gradient-to-b from-transparent from-30% via-accent/35 via-70% to-transparent md:block" />
 
-      <div className="relative z-10 mx-auto w-full max-w-5xl px-6 pt-32 pb-20 md:px-20">
-        <div className="mb-7 flex items-center gap-3">
-          <div className="h-px w-8 bg-accent" />
-          <span className="text-xs font-medium tracking-[0.22em] text-accent uppercase">
-            IT Consulting for SMB&nbsp;&nbsp;|&nbsp;&nbsp;長野・東京・全国対応
+      <div className="relative z-10 mx-auto w-full min-w-0 max-w-5xl px-4 pt-28 pb-16 sm:px-6 sm:pt-32 sm:pb-20 md:px-20">
+        <div className="mb-7 flex min-w-0 items-center gap-3">
+          <div className="h-px w-8 shrink-0 bg-accent" />
+          <span className="min-w-0 text-[10px] font-medium tracking-[0.12em] text-accent uppercase sm:text-xs sm:tracking-[0.22em]">
+            <span className="block sm:inline">IT Consulting for SMB</span>
+            <span className="hidden sm:inline">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+            <span className="block sm:inline">長野・東京・全国対応</span>
           </span>
         </div>
 
-        <h1 className="mb-4 font-mincho text-[clamp(32px,5vw,58px)] leading-[1.55] font-black tracking-wide text-white">
+        <h1 className="mb-4 font-mincho text-2xl leading-snug font-black tracking-wide text-white sm:text-3xl md:text-4xl md:leading-[1.55] lg:text-5xl">
           ITは、
           <em className="text-accent not-italic">使いこなせた日</em>
           から
-          <br />
+          <br className="hidden sm:block" />
           資産になる。
         </h1>
 
-        <p className="mb-11 max-w-md font-gothic text-sm leading-8 tracking-wide text-white/60">
+        <HeroSalonBanner />
+
+        <p className="mb-11 max-w-md font-gothic text-sm leading-7 tracking-wide text-white/60 sm:leading-8">
           導入して終わりにしない。
-          <br />
+          <br className="hidden sm:block" />
           売上アップ・業務効率化のためのITを、
-          <br />
+          <br className="hidden sm:block" />
           現場に定着するまで、一緒に走ります。
         </p>
 
-        <div className="mb-14 flex flex-wrap items-center gap-6">
+        <div className="mb-14 flex w-full min-w-0 flex-col items-stretch gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6">
           <a
             href={SITE.lineUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center gap-2 rounded-md bg-accent px-8 py-4 text-[15px] font-bold tracking-[0.06em] text-primary shadow-[0_6px_24px_rgba(46,204,138,0.30)] transition-opacity hover:opacity-90 ${FOCUS_RING_ON_ACCENT}`}
+            className={`inline-flex w-full items-center justify-center gap-2 rounded-md bg-accent px-8 py-4 text-sm font-bold tracking-[0.06em] text-primary shadow-[0_6px_24px_rgba(46,204,138,0.30)] transition-opacity hover:opacity-90 sm:w-auto sm:text-[15px] ${FOCUS_RING_ON_ACCENT}`}
           >
             <MessageCircle className="h-[18px] w-[18px] shrink-0" aria-hidden="true" />
             LINEで無料相談する
@@ -64,7 +69,7 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="flex flex-wrap items-center gap-y-4">
+        <div className="flex w-full min-w-0 flex-wrap items-center gap-y-4">
           <div className="flex items-center gap-2.5">
             <TrustIcon>
               <MapPin className="h-3.5 w-3.5 text-accent" strokeWidth={2} aria-hidden="true" />
@@ -92,7 +97,7 @@ export default function Hero() {
           <div className="mx-6 hidden h-[30px] w-px bg-white/12 sm:block" />
 
           <div className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.06] py-1.5 pr-3.5 pl-2.5">
-            <div className="h-2 w-2 shrink-0 rounded-full bg-[#00A1E0]" />
+            <div className="h-2 w-2 shrink-0 rounded-full bg-white/50" />
             <span className="text-[11px] tracking-[0.05em] text-white/60">
               Salesforce 公認資格 保有
             </span>

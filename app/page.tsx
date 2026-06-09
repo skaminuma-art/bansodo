@@ -14,8 +14,8 @@ export default function Home() {
     <>
       <Hero />
       <Problems />
-      <ServiceCards />
       <SalonPackageBanner />
+      <ServiceCards />
       <Philosophy />
       <Representative />
       <Testimonials />

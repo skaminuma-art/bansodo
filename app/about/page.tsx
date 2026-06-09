@@ -63,19 +63,22 @@ export default function AboutPage() {
 
             <div className="mt-8 space-y-4 text-base leading-8 text-text-custom">
               <p>
-                M&A仲介・法人営業を経験後、
-                Salesforceの導入・活用支援に携わる。
+                大学卒業後、法人営業・M&A仲介を経て、
+                <span className="font-bold text-accent">300名以上</span>
+                の中小企業社長と直接向き合ってきた。
               </p>
               <p>
-                現場で「導入したが使われていない」システムを
-                何度も目の当たりにした経験から、
-                &ldquo;定着するまで伴走する&rdquo;をコンセプトに伴走堂を創業。
+                転機は、Salesforce導入支援の現場。
+                社長が費用をかけて入れたシステムが、誰にも使われていなかった。
+              </p>
+              <p>その原体験が、伴走堂の原点。</p>
+              <p className="font-bold text-accent">
+                使いこなせるまで、絶対に離れない。
               </p>
               <p>
                 Salesforce公認資格 保有。
+                <br />
                 「難しいことを、わかりやすく。入れて終わりにしない。」
-                <br className="sm:hidden" />
-                をモットーに、現場に定着するIT支援を提供していきます。
               </p>
             </div>
 

@@ -56,7 +56,7 @@ const CATEGORIES = [
 export default function ServiceCards() {
   return (
     <section id="services" className="bg-bg-custom py-24 sm:py-28">
-      <div className="mx-auto max-w-5xl px-6 sm:px-8">
+      <div className="mx-auto w-full min-w-0 max-w-5xl px-4 sm:px-8">
         <div className="mb-14">
           <div className="mb-4 flex items-center gap-3">
             <div className="h-px w-7 bg-accent" />
@@ -64,10 +64,10 @@ export default function ServiceCards() {
               Services
             </span>
           </div>
-          <h2 className="font-mincho text-[clamp(24px,4vw,36px)] leading-relaxed font-black tracking-wide text-primary">
+          <h2 className="font-mincho text-xl leading-relaxed font-black tracking-wide text-primary sm:text-2xl md:text-3xl lg:text-4xl">
             小さく始めて、段階的に育てる。
           </h2>
-          <p className="mt-2 text-sm leading-relaxed text-[#888]">
+          <p className="mt-2 text-sm leading-relaxed text-text-custom/60">
             伴走型のIT支援で、現場に定着するまで一緒に走ります。
           </p>
         </div>
@@ -87,7 +87,7 @@ export default function ServiceCards() {
                     />
                     {category.title}
                   </span>
-                  <div className="h-px flex-1 bg-[#e5e2dd]" />
+                  <div className="h-px min-w-0 flex-1 bg-primary/10" />
                 </div>
 
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -99,7 +99,7 @@ export default function ServiceCards() {
                       <Link
                         key={key}
                         href={href}
-                        className={`group relative flex flex-col overflow-hidden rounded-xl border border-[#e8e5e0] bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_12px_36px_rgba(15,30,48,0.10)] ${styles.cardHover} ${FOCUS_RING}`}
+                        className={`group relative flex min-w-0 flex-col overflow-hidden rounded-xl border border-primary/10 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_12px_36px_rgba(15,30,48,0.10)] ${styles.cardHover} ${FOCUS_RING}`}
                       >
                         <span
                           className={`absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${styles.accentLine}`}
@@ -118,7 +118,7 @@ export default function ServiceCards() {
                         <h3 className="font-mincho text-sm leading-snug font-bold text-primary sm:text-base">
                           {service.name}
                         </h3>
-                        <p className="mt-2 flex-1 text-xs leading-[1.8] text-[#888] sm:text-sm">
+                        <p className="mt-2 flex-1 text-xs leading-[1.8] text-text-custom/60 sm:text-sm">
                           {service.shortDescription}
                         </p>
 

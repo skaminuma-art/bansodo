@@ -58,7 +58,7 @@ export default function RootLayout({
       </head>
       <body className="flex min-h-full flex-col font-gothic text-text-custom">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 overflow-x-hidden max-w-full">{children}</main>
         <Footer />
         <GoogleAnalytics gaId="G-RBSMG48YFQ" />
       </body>
