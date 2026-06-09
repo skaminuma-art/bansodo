@@ -67,8 +67,14 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 max-w-6xl border-t border-white/15 pt-6 text-center text-xs">
-        © 2026 伴走堂 | 代表 {SITE.representative}
+      <div className="mx-auto mt-10 flex max-w-6xl flex-col items-center justify-between gap-3 border-t border-white/15 pt-6 text-xs sm:flex-row">
+        <p>© 2026 伴走堂 | 代表 {SITE.representative}</p>
+        <Link
+          href="/privacy"
+          className="text-white/50 underline underline-offset-4 transition-colors hover:text-white/80"
+        >
+          プライバシーポリシー
+        </Link>
       </div>
     </footer>
   );

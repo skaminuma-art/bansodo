@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Noto_Sans_JP, Shippori_Mincho } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -59,6 +60,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <GoogleAnalytics gaId="G-RBSMG48YFQ" />
       </body>
     </html>
   );
