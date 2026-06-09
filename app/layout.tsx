@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   ...createPageMetadata({
     title: "伴走堂 | 中小企業の伴走型IT支援",
     description:
-      "導入して終わりにしない。Webサイト・公式LINE・CRM・AI自動化まで、現場に定着するまで伴走します。",
+      "導入して終わりにしない。Webサイト・公式LINE・CRM・AI自動化まで、現場に定着するまで伴走します。長野県松本市・東京拠点。全国オンライン対応。",
     path: "/",
     ogImage: LOGO.icon,
     ogImageAlt: "伴走堂 BANSODO",

@@ -176,9 +176,10 @@ export const services: Record<string, ServiceData> = {
     slug: "crm",
     name: "CRM導入・定着支援",
     shortDescription: "顧客情報を、チーム全員が使える資産に。",
-    catchcopy: "顧客管理を、属人化からチームの力へ。",
+    catchcopy: "なぜ、入れたCRMは使われなくなるのか。その答えが、伴走堂の出発点です。",
     icon: Users,
     features: [
+      { icon: FileText, title: "要件定義から一緒に設計", description: "「現場が使いたい仕組み」を先に整理。ツールありきで進めないから、導入後に形骸化しません。" },
       { icon: Database, title: "CRM選定・導入設計", description: "Salesforce / HubSpot / kintone等、最適なツールを選定。" },
       { icon: Settings, title: "カスタマイズ・連携設定", description: "業務フローに合わせた設定と他ツール連携。" },
       { icon: Users, title: "データ移行・初期設定", description: "既存データの整理と移行を丁寧にサポート。" },
@@ -191,6 +192,7 @@ export const services: Record<string, ServiceData> = {
       "営業の属人化を解消し、チームで顧客管理したい",
     ],
     differentiators: [
+      { title: "「なぜ使われないか」を知っている", description: "要件定義・構築・運用まで実務経験があるから、定着を阻む原因を導入前に潰せます。" },
       { title: "定着支援が最大の強み", description: "導入して終わりにせず、全員が使えるまで現場に入って伴走します。" },
       { title: "御社に最適なCRM選定", description: "Salesforce一択にせず、規模と予算に合ったツールを提案します。" },
       { title: "Excelからの移行支援", description: "散らばったデータの整理・クレンジングから丁寧に対応します。" },
@@ -206,17 +208,18 @@ export const services: Record<string, ServiceData> = {
   ai: {
     slug: "ai",
     name: "AI・業務自動化",
-    shortDescription: "繰り返し作業を減らし、本業に集中する。",
+    shortDescription: "繰り返し作業を自動化し、本業に集中できる時間を作る。",
     catchcopy: "AIを、現場で本当に使える形に。",
     icon: Bot,
     features: [
-      { icon: Workflow, title: "業務フロー分析", description: "自動化できる業務を一緒に洗い出します。" },
-      { icon: Bot, title: "AIツール選定・導入", description: "ChatGPT、Make、Zapier等を活用した自動化。" },
-      { icon: Zap, title: "ワークフロー構築", description: "日報作成、メール返信、データ入力等を自動化。" },
-      { icon: HeartHandshake, title: "運用定着支援", description: "導入後も使い続けられるよう伴走します。" },
+      { icon: Workflow, title: "業務フロー分析・自動化設計", description: "どの作業が自動化できるかを一緒に洗い出し、優先順位をつけて設計します。" },
+      { icon: Bot, title: "生成AI活用（顧客対応・文書作成）", description: "問い合わせ返信の下書き、日報・議事録の自動生成、提案書の初稿作成など即日で効果を実感。" },
+      { icon: Zap, title: "データ集計・転記の自動化", description: "ExcelやGoogleスプレッドシートへの手入力、定期レポート作成をMake/Zapierで自動化。" },
+      { icon: HeartHandshake, title: "運用定着・改善サポート", description: "「使ってみたら使えなかった」がないよう、現場が動くまで伴走します。" },
     ],
     pricingNote: "初期費用20万円〜 ／ 月額3万円〜",
     recommended: [
+      "毎日同じ文章を書いている（返信・日報・報告書など）",
       "毎日同じ作業の繰り返しに時間を取られている",
       "AIに興味はあるが、何に使えばいいかわからない",
       "人手不足で、業務効率化が急務",

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { CheckCircle2, Globe, MapPin, MessageCircle } from "lucide-react";
-import HeroSalonBanner from "@/components/lp/HeroSalonBanner";
 import { FOCUS_RING_ON_ACCENT, FOCUS_RING_ON_DARK } from "@/lib/a11y";
 import { SITE } from "@/lib/site";
 
@@ -41,8 +40,6 @@ export default function Hero() {
           資産になる。
         </h1>
 
-        <HeroSalonBanner />
-
         <p className="mb-11 max-w-md font-gothic text-sm leading-7 tracking-wide text-white/60 sm:leading-8">
           導入して終わりにしない。
           <br className="hidden sm:block" />
@@ -77,7 +74,7 @@ export default function Hero() {
             <div>
               <div className="mb-0.5 text-[10px] tracking-[0.1em] text-white/40">拠点</div>
               <div className="text-[13px] font-medium text-white/[0.82]">
-                {SITE.bases.join("・")}
+                長野県松本市・東京拠点｜県内は訪問対応可・全国オンライン対応
               </div>
             </div>
           </div>
