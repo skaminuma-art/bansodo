@@ -17,6 +17,15 @@ const config: Config = {
         mincho: ["var(--font-shippori-mincho)", "serif"],
         gothic: ["var(--font-noto-sans-jp)", "sans-serif"],
       },
+      keyframes: {
+        heroPulse: {
+          "0%, 100%": { opacity: "0.4" },
+          "50%": { opacity: "1" },
+        },
+      },
+      animation: {
+        "hero-pulse": "heroPulse 2s ease-in-out infinite",
+      },
     },
   },
 };

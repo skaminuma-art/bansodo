@@ -38,8 +38,19 @@ body {
   }
 }
 
+@layer utilities {
+  .bg-hemp-leaf {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='none' stroke='%232ECC8A' stroke-width='0.8'%3E%3Cpolygon points='30,5 51,17.5 51,42.5 30,55 9,42.5 9,17.5' /%3E%3Cpolygon points='30,15 45,23.25 45,39.75 30,48 15,39.75 15,23.25' /%3E%3Cline x1='30' y1='5' x2='30' y2='15'/%3E%3Cline x1='51' y1='17.5' x2='45' y2='23.25'/%3E%3Cline x1='51' y1='42.5' x2='45' y2='39.75'/%3E%3Cline x1='30' y1='55' x2='30' y2='48'/%3E%3Cline x1='9' y1='42.5' x2='15' y2='39.75'/%3E%3Cline x1='9' y1='17.5' x2='15' y2='23.25'/%3E%3Cline x1='30' y1='15' x2='30' y2='48'/%3E%3Cline x1='15' y1='23.25' x2='45' y2='39.75'/%3E%3Cline x1='45' y1='23.25' x2='15' y2='39.75'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 60px 60px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .animate-hero-pulse {
+    animation: none;
   }
 }
