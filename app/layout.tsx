@@ -37,8 +37,9 @@ export const metadata: Metadata = {
     ogImageAlt: "伴走堂 BANSODO",
   }),
   icons: {
-    icon: LOGO.icon,
+    icon: { url: LOGO.icon, type: "image/jpeg" },
     apple: LOGO.icon,
+    shortcut: LOGO.icon,
   },
 };
 
