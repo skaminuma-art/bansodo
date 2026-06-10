@@ -67,14 +67,18 @@ export default function Hero() {
         </div>
 
         <div className="flex w-full min-w-0 flex-wrap items-center gap-y-4">
-          <div className="flex items-center gap-2.5">
+          <div className="flex min-w-0 items-start gap-2.5 overflow-hidden">
             <TrustIcon>
               <MapPin className="h-3.5 w-3.5 text-accent" strokeWidth={2} aria-hidden="true" />
             </TrustIcon>
-            <div>
+            <div className="min-w-0">
               <div className="mb-0.5 text-[10px] tracking-[0.1em] text-white/40">拠点</div>
-              <div className="text-[13px] font-medium text-white/[0.82]">
-                長野県松本市・東京拠点｜県内は訪問対応可・全国オンライン対応
+              <div className="min-w-0 break-keep text-[13px] font-medium text-white/[0.82]">
+                <span className="block sm:hidden">長野県松本市・東京</span>
+                <span className="block sm:hidden">全国オンライン対応</span>
+                <span className="hidden sm:block">
+                  長野県松本市・東京拠点｜県内は訪問対応可・全国オンライン対応
+                </span>
               </div>
             </div>
           </div>
@@ -89,15 +93,6 @@ export default function Hero() {
               <div className="mb-0.5 text-[10px] tracking-[0.1em] text-white/40">対応エリア</div>
               <div className="text-[13px] font-medium text-white/[0.82]">{SITE.areaNote}</div>
             </div>
-          </div>
-
-          <div className="mx-6 hidden h-[30px] w-px bg-white/12 sm:block" />
-
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.06] py-1.5 pr-3.5 pl-2.5">
-            <div className="h-2 w-2 shrink-0 rounded-full bg-white/50" />
-            <span className="text-[11px] tracking-[0.05em] text-white/60">
-              Salesforce 公認資格 保有
-            </span>
           </div>
 
           <div className="mx-6 hidden h-[30px] w-px bg-white/12 sm:block" />

@@ -210,7 +210,7 @@ export default function SalonPackagePage() {
 
       {/* ⑤ モニター条件 */}
       <section className="bg-white px-4 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto w-full min-w-0 max-w-3xl">
           <h2 className="text-center font-mincho text-2xl font-semibold text-primary sm:text-3xl">
             先着3店舗様限定　モニター条件
           </h2>
@@ -218,12 +218,14 @@ export default function SalonPackagePage() {
             {SALON_MONITOR_CONDITIONS.map((condition, index) => (
               <li
                 key={condition}
-                className="flex items-start gap-4 rounded-sm border border-primary/10 bg-bg-custom px-5 py-5"
+                className="flex items-start gap-4 overflow-hidden rounded-sm border border-primary/10 bg-bg-custom px-5 py-5"
               >
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary font-mincho text-sm font-semibold text-white">
                   {index + 1}
                 </span>
-                <p className="pt-1 text-sm leading-7 text-text-custom">{condition}</p>
+                <p className="min-w-0 flex-1 break-keep pt-1 text-sm leading-7 text-text-custom">
+                  {condition}
+                </p>
               </li>
             ))}
           </ul>
