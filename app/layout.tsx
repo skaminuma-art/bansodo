@@ -4,7 +4,7 @@ import { Noto_Sans_JP, Shippori_Mincho } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { LOGO } from "@/lib/site";
+import { IMAGES, LOGO } from "@/lib/site";
 import {
   SITE_URL,
   createPageMetadata,
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     description:
       "導入して終わりにしない。Webサイト・公式LINE・CRM・AI自動化まで、現場に定着するまで伴走します。長野県松本市・東京拠点。全国オンライン対応。",
     path: "/",
-    ogImage: LOGO.icon,
-    ogImageAlt: "伴走堂 BANSODO",
+    ogImage: IMAGES.ogp,
+    ogImageAlt: "伴走堂 BANSODO — ITは、使いこなせた日から資産になる。",
   }),
   icons: {
     icon: { url: LOGO.icon, type: "image/jpeg" },

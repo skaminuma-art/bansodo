@@ -23,6 +23,8 @@ export const LOGO = {
 } as const;
 
 export const IMAGES = {
+  /** OGP・SNSシェア用（1200×630） */
+  ogp: "/images/ogp.png",
   representative: "/images/representative.jpg",
   heroTop:
     "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600",

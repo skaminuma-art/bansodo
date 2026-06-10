@@ -8,7 +8,7 @@ type ContactRequestBody = {
   message?: string;
 };
 
-const FROM_EMAIL = "伴走堂 <onboarding@bansodo.jp>";
+const FROM_EMAIL = `伴走堂 <${SITE.email}>`;
 
 export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;

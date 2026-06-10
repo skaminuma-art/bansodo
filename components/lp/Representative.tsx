@@ -29,14 +29,20 @@ export default function Representative() {
             Salesforce公認資格 保有
           </p>
           <p className="mt-4 text-sm leading-7 text-text-custom/80">
-            「難しいことを、わかりやすく。入れて終わりにしない。」
-            <br className="sm:hidden" />
-            をモットーに、現場に定着するIT支援を提供していきます。
+            大学卒業後、法人営業・M&A仲介を経て、
+            <span className="font-bold text-accent">300名以上</span>
+            の中小企業社長と直接向き合ってきた。
           </p>
-          <p className="mt-6 font-mincho text-base leading-8 text-primary sm:text-xl">
-            「売って終わりにしない。
-            <br className="sm:hidden" />
-            使いこなせるまで、一緒に走ります。」
+          <p className="mt-3 text-sm leading-7 text-text-custom/80">
+            転機は、Salesforce導入支援の現場だった。
+            社長が何十万もかけて入れたシステムが、半年後には誰も開いていなかった。
+          </p>
+          <p className="mt-4 font-mincho text-base font-semibold leading-8 text-accent sm:text-lg">
+            「売って終わりにしない。使いこなせるまで、一緒に走る。」
+          </p>
+          <p className="mt-3 text-sm leading-7 text-text-custom/80">
+            難しいことを、わかりやすく。
+            ITを、現場の武器に。
           </p>
           <Link
             href="/about"

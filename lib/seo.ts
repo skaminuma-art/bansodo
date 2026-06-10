@@ -20,7 +20,7 @@ export function createPageMetadata({
   title,
   description,
   path,
-  ogImage = LOGO.icon,
+  ogImage = IMAGES.ogp,
   ogImageAlt = `${SITE.name} ${SITE.nameEn}`,
 }: PageMetadataOptions): Metadata {
   const url = absoluteUrl(path);
@@ -214,7 +214,7 @@ export function getServiceMetadata(service: ServiceData): Metadata {
     title: `${service.name} | ${SITE.name}`,
     description: getServiceDescription(service),
     path: `/services/${service.slug}`,
-    ogImage: SERVICE_OG_IMAGES[service.slug] ?? LOGO.icon,
+    ogImage: SERVICE_OG_IMAGES[service.slug] ?? IMAGES.ogp,
     ogImageAlt: `${SITE.name} — ${service.name}`,
   });
 }
@@ -231,7 +231,7 @@ export const contactMetadata = createPageMetadata({
   title: `お問い合わせ | ${SITE.name}`,
   description: `${SITE.name}へのお問い合わせはこちら。公式LINE・メール・電話で、費用やサービス内容などお気軽にご相談ください。`,
   path: "/contact",
-  ogImage: LOGO.icon,
+  ogImage: IMAGES.ogp,
   ogImageAlt: `${SITE.name} お問い合わせ`,
 });
 
@@ -240,6 +240,6 @@ export const salonPackageMetadata = createPageMetadata({
   description:
     "美容室・理容室・トリマー向け。ホームページ×公式LINE×自動化でリピーター獲得を仕組み化。モニター3店舗限定・半額でご提供中。",
   path: "/salon-package",
-  ogImage: IMAGES.heroLine,
+  ogImage: IMAGES.ogp,
   ogImageAlt: `${SITE.name} サロン向けスペシャルパッケージ`,
 });
