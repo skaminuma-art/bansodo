@@ -26,7 +26,7 @@ export default function ServicePage({
           <h1 className="font-mincho text-2xl font-semibold leading-relaxed text-white sm:text-4xl">
             {service.name}
           </h1>
-          <p className="mt-6 text-sm leading-8 text-white/80 sm:text-base sm:text-lg">
+          <p className="mt-6 text-sm leading-8 text-white/80 sm:text-lg">
             {service.catchcopy}
           </p>
         </div>

@@ -16,20 +16,28 @@ export default function Footer() {
           <p className="mt-1 text-sm">{SITE.nameEn}</p>
           <p className="mt-4 text-sm leading-7">{SITE.catchcopy}</p>
           <div className="mt-6 flex items-center justify-center gap-4 sm:justify-start">
-            <a
-              href={SITE.xUrl}
-              className={`flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:bg-white/10 ${FOCUS_RING_ON_DARK}`}
-              aria-label="X（旧Twitter）"
-            >
-              <X className="h-4 w-4" aria-hidden="true" />
-            </a>
-            <a
-              href={SITE.noteUrl}
-              className={`flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:bg-white/10 ${FOCUS_RING_ON_DARK}`}
-              aria-label="Note"
-            >
-              <NotebookPen className="h-4 w-4" aria-hidden="true" />
-            </a>
+            {SITE.xUrl !== "#" && (
+              <a
+                href={SITE.xUrl}
+                className={`flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:bg-white/10 ${FOCUS_RING_ON_DARK}`}
+                aria-label="X（旧Twitter）"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <X className="h-4 w-4" aria-hidden="true" />
+              </a>
+            )}
+            {SITE.noteUrl !== "#" && (
+              <a
+                href={SITE.noteUrl}
+                className={`flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:bg-white/10 ${FOCUS_RING_ON_DARK}`}
+                aria-label="Note"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <NotebookPen className="h-4 w-4" aria-hidden="true" />
+              </a>
+            )}
           </div>
         </div>
 
