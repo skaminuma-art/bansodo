@@ -195,14 +195,14 @@ export function serviceJsonLd(service: ServiceData) {
 }
 
 const SERVICE_OG_IMAGES: Record<string, string> = {
-  line: IMAGES.heroLine,
-  website: IMAGES.heroWebsite,
-  meo: IMAGES.heroMeo,
-  crm: IMAGES.heroCrm,
-  ai: IMAGES.heroAi,
-  sns: IMAGES.heroServiceDefault,
-  recruitment: IMAGES.heroServiceDefault,
-  support: IMAGES.heroServiceDefault,
+  crm: IMAGES.ogp,
+  line: IMAGES.ogp,
+  website: IMAGES.ogp,
+  meo: IMAGES.ogp,
+  ai: IMAGES.ogp,
+  sns: IMAGES.ogp,
+  recruitment: IMAGES.ogp,
+  support: IMAGES.ogp,
 };
 
 export function getServiceDescription(service: ServiceData): string {

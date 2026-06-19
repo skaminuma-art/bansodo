@@ -18,10 +18,11 @@ export default function ServicePage({
 
   return (
     <>
-      <section className="bg-primary px-5 py-16 sm:px-8 sm:py-24">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/10">
-            <Icon className="h-7 w-7 text-accent" aria-hidden="true" />
+      <section className="relative overflow-hidden bg-primary px-5 py-16 sm:px-8 sm:py-24">
+        <div className="pointer-events-none absolute inset-0 bg-hemp-leaf opacity-[0.05]" />
+        <div className="relative mx-auto max-w-3xl text-center">
+          <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/15 bg-white/8 shadow-[0_8px_32px_rgba(0,0,0,0.15)]">
+            <Icon className="h-8 w-8 text-accent" aria-hidden="true" />
           </div>
           <h1 className="font-mincho text-2xl font-semibold leading-relaxed text-white sm:text-4xl">
             {service.name}
@@ -43,7 +44,7 @@ export default function ServicePage({
               return (
                 <div
                   key={feature.title}
-                  className="rounded-sm border border-primary/10 bg-white p-6"
+                  className="card-premium rounded-xl p-6"
                 >
                   <FeatureIcon
                     className="h-6 w-6 text-accent"

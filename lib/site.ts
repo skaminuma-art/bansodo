@@ -27,20 +27,6 @@ export const IMAGES = {
   /** OGP・SNSシェア用（1200×630） */
   ogp: "/images/ogp.png",
   representative: "/images/representative.jpg",
-  heroTop:
-    "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600",
-  heroServiceDefault:
-    "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600",
-  heroLine:
-    "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800",
-  heroWebsite:
-    "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800",
-  heroMeo:
-    "https://images.unsplash.com/photo-1577760258779-e787a1733016?w=800",
-  heroCrm:
-    "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800",
-  heroAi:
-    "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800",
 } as const;
 
 export const SALESFORCE_QUALIFICATIONS = [

@@ -1,4 +1,5 @@
 import { AlertCircle } from "lucide-react";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 const problems = [
   "CRMを導入したが、半年後には誰も開いていない",
@@ -8,27 +9,32 @@ const problems = [
 
 export default function Problems() {
   return (
-    <section className="bg-bg-custom px-4 py-16 sm:px-8 sm:py-20">
+    <section className="overflow-x-hidden bg-bg-custom px-4 py-14 sm:px-8 sm:py-24">
       <div className="mx-auto w-full max-w-3xl">
-        <h2 className="text-center font-mincho text-2xl font-semibold text-primary sm:text-3xl">
-          こんなお悩みはありませんか？
-        </h2>
-        <p className="mt-4 text-center text-sm text-text-custom/60">
-          多くの中小企業が、同じ壁にぶつかっています。
-        </p>
-        <div className="mt-10 space-y-4">
-          {problems.map((problem) => (
+        <SectionHeading
+          label="Problems"
+          title="こんなお悩みはありませんか？"
+          description="多くの中小企業が、同じ壁にぶつかっています。"
+          align="center"
+        />
+        <div className="mt-10 space-y-3 sm:mt-12">
+          {problems.map((problem, index) => (
             <div
               key={problem}
-              className="flex w-full items-start gap-3 overflow-visible rounded-sm border border-primary/10 bg-white px-4 py-5 sm:gap-4 sm:px-6"
+              className="card-premium flex w-full items-start gap-4 rounded-xl px-4 py-5 sm:gap-5 sm:px-6"
             >
-              <AlertCircle
-                className="mt-0.5 h-5 w-5 shrink-0 text-primary/70"
-                aria-hidden="true"
-              />
-              <p className="min-w-0 flex-1 whitespace-normal break-words text-base leading-7 text-text-custom">
-                {problem}
-              </p>
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary font-mincho text-sm font-bold text-white">
+                {index + 1}
+              </span>
+              <div className="min-w-0 flex-1 pt-0.5">
+                <AlertCircle
+                  className="mb-2 h-4 w-4 text-accent sm:hidden"
+                  aria-hidden="true"
+                />
+                <p className="min-w-0 break-words text-[15px] leading-7 text-text-custom sm:text-base">
+                  {problem}
+                </p>
+              </div>
             </div>
           ))}
         </div>

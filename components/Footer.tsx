@@ -7,7 +7,7 @@ const footerLinkClass = `transition-colors hover:text-white rounded-sm ${FOCUS_R
 
 export default function Footer() {
   return (
-    <footer className="bg-primary px-5 py-12 text-white/70 sm:px-8">
+    <footer className="bg-primary px-4 py-12 pb-24 text-white/70 sm:px-8 lg:pb-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 text-center sm:grid sm:grid-cols-2 sm:items-start sm:text-left lg:grid-cols-3">
         <div className="flex w-full flex-col items-center sm:items-start">
           <p className="font-mincho text-xl font-semibold text-white">
@@ -44,7 +44,7 @@ export default function Footer() {
 
         <div className="w-full">
           <p className="mb-4 text-sm font-medium text-white">サービス</p>
-          <ul className="space-y-2">
+          <ul className="grid grid-cols-2 gap-x-4 gap-y-2 sm:block sm:space-y-2">
             {SERVICES_NAV.map((item) => (
               <li key={item.href}>
                 <Link

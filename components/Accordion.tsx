@@ -37,7 +37,7 @@ export default function Accordion({ items, dark = false }: AccordionProps) {
                 type="button"
                 id={buttonId}
                 onClick={() => setOpenIndex(isOpen ? null : index)}
-                className={`flex w-full items-center justify-between gap-4 px-5 py-5 text-left transition-colors sm:px-6 ${FOCUS_RING} ${
+                className={`flex w-full min-w-0 items-center justify-between gap-3 px-4 py-4 text-left transition-colors sm:gap-4 sm:px-6 sm:py-5 ${FOCUS_RING} ${
                   dark
                     ? "text-white hover:bg-white/5"
                     : "text-primary hover:bg-bg-custom"
@@ -45,7 +45,9 @@ export default function Accordion({ items, dark = false }: AccordionProps) {
                 aria-expanded={isOpen}
                 aria-controls={panelId}
               >
-                <span className="font-medium">Q. {item.question}</span>
+                <span className="min-w-0 flex-1 break-words text-sm font-medium leading-relaxed sm:text-base">
+                  Q. {item.question}
+                </span>
                 <ChevronDown
                   className={`h-5 w-5 shrink-0 transition-transform duration-200 ${
                     isOpen ? "rotate-180" : ""
@@ -59,7 +61,7 @@ export default function Accordion({ items, dark = false }: AccordionProps) {
               role="region"
               aria-labelledby={buttonId}
               hidden={!isOpen}
-              className={`px-5 pb-6 sm:px-6 ${
+              className={`px-4 pb-5 sm:px-6 sm:pb-6 ${
                 dark ? "text-white/80" : "text-text-custom/80"
               }`}
             >

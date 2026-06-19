@@ -142,7 +142,7 @@ export default function Header() {
       {mobileOpen && (
         <nav
           id="mobile-nav"
-          className="border-t border-primary/10 bg-bg-custom px-4 py-5 sm:px-5 lg:hidden"
+          className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-primary/10 bg-bg-custom px-4 py-5 sm:px-5 lg:hidden"
           aria-label="モバイルメニュー"
         >
           <p className="mb-3 text-xs font-medium tracking-widest text-primary/70">

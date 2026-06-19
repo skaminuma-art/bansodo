@@ -1,4 +1,5 @@
 import Accordion from "@/components/Accordion";
+import SectionHeading from "@/components/ui/SectionHeading";
 import { services } from "@/lib/services";
 
 const crmFaqs = services.crm.faqs;
@@ -22,16 +23,16 @@ export default function FAQ() {
     <section
       id="faq"
       aria-labelledby="faq-heading"
-      className="bg-bg-custom px-5 py-16 sm:px-8 sm:py-20"
+      className="overflow-x-hidden bg-bg-custom px-4 py-14 sm:px-8 sm:py-20"
     >
       <div className="mx-auto max-w-3xl">
-        <h2
+        <SectionHeading
+          label="FAQ"
+          title="よくあるご質問"
+          align="center"
           id="faq-heading"
-          className="text-center font-mincho text-2xl font-semibold text-primary sm:text-3xl"
-        >
-          よくあるご質問
-        </h2>
-        <div className="mt-10">
+        />
+        <div className="mt-10 sm:mt-12">
           <Accordion items={faqItems} />
         </div>
       </div>
