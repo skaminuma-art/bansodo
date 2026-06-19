@@ -1,9 +1,9 @@
 import { AlertCircle } from "lucide-react";
 
 const problems = [
-  "システムを入れたが、社員が使いこなせず放置されている",
-  "カタカナばかりのIT業者の話についていけない",
-  "ExcelやLINEでの管理に限界を感じているが、何から手をつけていいかわからない",
+  "CRMを導入したが、半年後には誰も開いていない",
+  "顧客情報がExcel・個人メモ・LINEに散らばり、営業が属人化している",
+  "ベンダーの提案がカタカナばかりで、現場に合うか判断できない",
 ];
 
 export default function Problems() {
@@ -13,6 +13,9 @@ export default function Problems() {
         <h2 className="text-center font-mincho text-2xl font-semibold text-primary sm:text-3xl">
           こんなお悩みはありませんか？
         </h2>
+        <p className="mt-4 text-center text-sm text-text-custom/60">
+          多くの中小企業が、同じ壁にぶつかっています。
+        </p>
         <div className="mt-10 space-y-4">
           {problems.map((problem) => (
             <div

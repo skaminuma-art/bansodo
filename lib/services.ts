@@ -21,6 +21,7 @@ import {
   Briefcase,
   HeartHandshake,
 } from "lucide-react";
+import { SALESFORCE_QUALIFICATIONS } from "@/lib/site";
 
 export type ServiceFeature = {
   icon: LucideIcon;
@@ -196,7 +197,7 @@ export const services: Record<string, ServiceData> = {
       { title: "定着支援が最大の強み", description: "導入して終わりにせず、全員が使えるまで現場に入って伴走します。" },
       { title: "御社に最適なCRM選定", description: "Salesforce一択にせず、規模と予算に合ったツールを提案します。" },
       { title: "Excelからの移行支援", description: "散らばったデータの整理・クレンジングから丁寧に対応します。" },
-      { title: "Salesforce公認資格保持", description: "技術的な設定・カスタマイズも安心してお任せいただけます。" },
+      { title: "Salesforce公認資格多数保持", description: `アドミン・開発・コンサル系など${SALESFORCE_QUALIFICATIONS.length}種の公認資格を保有。技術的な設定・カスタマイズも安心してお任せいただけます。` },
     ],
     tools: ["Salesforce", "HubSpot", "kintone", "Zoho CRM"],
     faqs: [

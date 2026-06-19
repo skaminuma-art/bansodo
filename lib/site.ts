@@ -1,9 +1,10 @@
 export const SITE = {
   name: "伴走堂",
   nameEn: "BANSODO",
-  catchcopy: "ITは、使いこなせた日から資産になる。",
+  catchcopy: "CRMは、定着した日から資産になる。",
+  tagline: "中小企業のCRM導入・定着支援",
   representative: "上沼 将太朗",
-  title: "代表 / ITコンサルタント",
+  title: "代表 / CRM伴走コンサルタント",
   email: "info@bansodo.jp",
   phone: "070-8505-3216",
   lineUrl: "https://lin.ee/8vZs4DQ",
@@ -42,15 +43,52 @@ export const IMAGES = {
     "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800",
 } as const;
 
+export const SALESFORCE_QUALIFICATIONS = [
+  "Salesforce認定アドミニストレーター",
+  "Salesforce認定上級アドミニストレーター",
+  "Salesforce認定Platform App Builder",
+  "Salesforce認定Platform Developer I",
+  "Salesforce認定Sales Cloud Consultant",
+  "Salesforce認定Service Cloud Consultant",
+  "Salesforce認定Business Analyst",
+  "Salesforce認定AI Associate",
+  "Salesforce認定Data Cloud Consultant",
+  "Salesforce認定Marketing Cloud Email Specialist",
+  "Salesforce認定Associate",
+] as const;
+
+export const SALESFORCE_QUALIFICATION_LABEL = `${SALESFORCE_QUALIFICATIONS.length}種`;
+
+export const CRM_NAV = [
+  { href: "/services/crm", label: "CRM導入・定着支援" },
+  { href: "/#features", label: "選ばれる理由" },
+  { href: "/#process", label: "導入の流れ" },
+  { href: "/#cases", label: "支援事例" },
+  { href: "/#faq", label: "よくある質問" },
+] as const;
+
 export const SERVICES_NAV = [
+  { href: "/services/crm", label: "CRM導入・定着支援" },
+  { href: "/services/ai", label: "AI・業務自動化" },
+  { href: "/services/support", label: "継続サポート" },
   { href: "/services/line", label: "公式LINE構築" },
   { href: "/services/website", label: "Webサイト制作" },
   { href: "/services/meo", label: "MEO対策" },
   { href: "/services/sns", label: "SNS運用・投稿自動化" },
-  { href: "/services/crm", label: "CRM導入・定着支援" },
-  { href: "/services/ai", label: "AI・業務自動化" },
   { href: "/services/recruitment", label: "採用サイト制作" },
-  { href: "/services/support", label: "継続サポート" },
+] as const;
+
+export const CRM_STATS = [
+  { value: "300+", label: "社長との\n直接ヒアリング" },
+  { value: SALESFORCE_QUALIFICATION_LABEL, label: "Salesforce\n公認資格" },
+  { value: "100%", label: "定着支援まで\n伴走" },
+] as const;
+
+export const CRM_TOOLS = [
+  "Salesforce",
+  "HubSpot",
+  "kintone",
+  "Zoho CRM",
 ] as const;
 
 export const STEPS = [

@@ -1,25 +1,14 @@
 import Accordion from "@/components/Accordion";
+import { services } from "@/lib/services";
+
+const crmFaqs = services.crm.faqs;
 
 const faqItems = [
+  ...crmFaqs,
   {
     question: "ITに詳しくないのですが大丈夫ですか？",
     answer:
       "専門用語は一切使わず、社長のビジネスの言葉でお話しします。",
-  },
-  {
-    question: "パソコン操作が苦手なのですが……",
-    answer:
-      "スマホのLINEが使えれば問題ありません。操作手順まで一緒に伴走します。",
-  },
-  {
-    question: "料金はどのくらいかかりますか？",
-    answer:
-      "サービスや規模によって異なります。まずは無料相談でお気軽にご連絡ください。",
-  },
-  {
-    question: "導入後のサポートはありますか？",
-    answer:
-      "月額の継続サポートプランをご用意しています。導入後も一緒に走り続けます。",
   },
   {
     question: "対応エリアはどこですか？",

@@ -29,12 +29,12 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   ...createPageMetadata({
-    title: "伴走堂 | 中小企業の伴走型IT支援",
+    title: "伴走堂 | 中小企業のCRM導入・定着支援",
     description:
-      "導入して終わりにしない。Webサイト・公式LINE・CRM・AI自動化まで、現場に定着するまで伴走します。長野県松本市・東京拠点。全国オンライン対応。",
+      "CRM導入して終わりにしない。Salesforce・HubSpot・kintoneの選定から定着支援まで、現場に使いこなせるまで伴走します。長野県松本市・東京拠点。全国オンライン対応。",
     path: "/",
     ogImage: IMAGES.ogp,
-    ogImageAlt: "伴走堂 BANSODO — ITは、使いこなせた日から資産になる。",
+    ogImageAlt: "伴走堂 BANSODO — CRMは、定着した日から資産になる。",
   }),
   icons: {
     icon: { url: LOGO.icon, type: "image/jpeg" },

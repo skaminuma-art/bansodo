@@ -14,7 +14,8 @@ export default function Footer() {
             {SITE.name}
           </p>
           <p className="mt-1 text-sm">{SITE.nameEn}</p>
-          <p className="mt-4 text-sm leading-7">{SITE.catchcopy}</p>
+          <p className="mt-4 text-sm leading-7">{SITE.tagline}</p>
+          <p className="mt-1 text-sm leading-7 text-white/50">{SITE.catchcopy}</p>
           <div className="mt-6 flex items-center justify-center gap-4 sm:justify-start">
             {SITE.xUrl !== "#" && (
               <a

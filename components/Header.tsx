@@ -4,11 +4,9 @@ import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { FOCUS_RING, FOCUS_RING_ON_ACCENT } from "@/lib/a11y";
-import { SERVICES_NAV, SITE } from "@/lib/site";
+import { CRM_NAV, SERVICES_NAV, SITE } from "@/lib/site";
 
 const navLinkClass = `text-sm font-medium text-text-custom transition-colors hover:text-primary rounded-sm ${FOCUS_RING}`;
-
-const salonNavLinkClass = `text-sm font-semibold text-accent transition-colors hover:text-primary rounded-sm ${FOCUS_RING}`;
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -50,7 +48,7 @@ export default function Header() {
             伴走堂
           </span>
           <span className="font-gothic text-[10px] tracking-[0.25em] text-primary/60 sm:text-xs sm:tracking-[0.3em]">
-            BANSODO
+            CRM PARTNER
           </span>
         </Link>
 
@@ -74,7 +72,7 @@ export default function Header() {
               aria-controls={menuId}
               onClick={() => setDropdownOpen((prev) => !prev)}
             >
-              サービス一覧
+              サービス
               <ChevronDown className="h-4 w-4" aria-hidden="true" />
             </button>
             {dropdownOpen && (
@@ -83,12 +81,24 @@ export default function Header() {
                 role="menu"
                 className="absolute left-0 top-full w-56 rounded-sm border border-primary/10 bg-white py-2 shadow-lg"
               >
-                {SERVICES_NAV.map((item) => (
+                {CRM_NAV.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
                     role="menuitem"
                     className={`block px-4 py-2.5 text-sm text-text-custom transition-colors hover:bg-bg-custom hover:text-primary ${FOCUS_RING}`}
+                    onClick={closeDropdown}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <div className="my-2 border-t border-primary/10" />
+                {SERVICES_NAV.slice(1).map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    role="menuitem"
+                    className={`block px-4 py-2.5 text-sm text-text-custom/60 transition-colors hover:bg-bg-custom hover:text-primary ${FOCUS_RING}`}
                     onClick={closeDropdown}
                   >
                     {item.label}
@@ -102,9 +112,6 @@ export default function Header() {
           </Link>
           <Link href="/contact" className={navLinkClass}>
             お問い合わせ
-          </Link>
-          <Link href="/salon-package" className={salonNavLinkClass}>
-            🔥 サロン向けパッケージ
           </Link>
           <a
             href={SITE.lineUrl}
@@ -139,14 +146,30 @@ export default function Header() {
           aria-label="モバイルメニュー"
         >
           <p className="mb-3 text-xs font-medium tracking-widest text-primary/70">
-            サービス一覧
+            CRM支援
           </p>
           <ul className="mb-5 space-y-1 border-b border-primary/10 pb-5">
-            {SERVICES_NAV.map((item) => (
+            {CRM_NAV.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   className={`block rounded-sm py-2.5 text-sm leading-relaxed text-text-custom ${FOCUS_RING}`}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="mb-3 text-xs font-medium tracking-widest text-primary/50">
+            その他のサービス
+          </p>
+          <ul className="mb-5 space-y-1 border-b border-primary/10 pb-5">
+            {SERVICES_NAV.slice(1).map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={`block rounded-sm py-2.5 text-sm leading-relaxed text-text-custom/70 ${FOCUS_RING}`}
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.label}
@@ -171,15 +194,6 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
               >
                 お問い合わせ
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/salon-package"
-                className={`block rounded-sm py-2.5 text-sm font-semibold text-accent ${FOCUS_RING}`}
-                onClick={() => setMobileOpen(false)}
-              >
-                🔥 サロン向けパッケージ
               </Link>
             </li>
           </ul>

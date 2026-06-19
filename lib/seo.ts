@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IMAGES, LOGO, SITE } from "@/lib/site";
+import { IMAGES, LOGO, SALESFORCE_QUALIFICATIONS, SITE } from "@/lib/site";
 import type { ServiceData } from "@/lib/services";
 
 export const SITE_URL = "https://bansodo.jp";
@@ -118,7 +118,7 @@ export function siteLocalBusinessJsonLd() {
     url: SITE_URL,
     logo: absoluteUrl(LOGO.icon),
     description:
-      "導入して終わりにしない。Webサイト・公式LINE・CRM・AI自動化まで、現場に定着するまで伴走します。",
+      "CRM導入して終わりにしない。Salesforce・HubSpot・kintoneの選定から定着支援まで、現場に使いこなせるまで伴走します。",
     email: SITE.email,
     telephone: SITE.phone,
     areaServed: ["長野県松本市", "東京都", "全国（オンライン対応）"],
@@ -221,7 +221,7 @@ export function getServiceMetadata(service: ServiceData): Metadata {
 
 export const aboutMetadata = createPageMetadata({
   title: `私たちについて | ${SITE.name}`,
-  description: `${SITE.name}代表・${SITE.representative}のプロフィールと経歴。Salesforce公認資格保有。導入して終わりにしない、現場に定着するIT支援を提供しています。`,
+  description: `${SITE.name}代表・${SITE.representative}のプロフィールと経歴。Salesforce公認資格${SALESFORCE_QUALIFICATIONS.length}種保有。CRM導入して終わりにしない、現場に定着する伴走支援を提供しています。`,
   path: "/about",
   ogImage: IMAGES.representative,
   ogImageAlt: `${SITE.name} 代表 ${SITE.representative}`,

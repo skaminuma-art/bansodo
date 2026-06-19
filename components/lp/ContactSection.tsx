@@ -10,7 +10,7 @@ export default function ContactSection() {
           お問い合わせ
         </h2>
         <p className="mt-4 text-sm text-text-custom/70">
-          まずはお気軽にご相談ください
+          CRM導入・定着支援のご相談は、お気軽にどうぞ
         </p>
 
         <a

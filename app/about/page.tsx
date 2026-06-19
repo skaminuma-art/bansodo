@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import JsonLd from "@/components/JsonLd";
-import { IMAGES, SITE } from "@/lib/site";
+import { IMAGES, SALESFORCE_QUALIFICATIONS, SITE } from "@/lib/site";
 import { SITE_URL, aboutMetadata, organizationJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = aboutMetadata;
-
-const qualifications = [
-  "Salesforce認定アドミニストレーター",
-  "Salesforce認定Platform App Builder",
-  "Salesforce認定Sales Cloud Consultant",
-];
 
 export default function AboutPage() {
   const personJsonLd = {
@@ -58,7 +52,7 @@ export default function AboutPage() {
               {SITE.representative}
             </h2>
             <p className="mt-2 text-sm font-medium text-accent">
-              伴走堂 代表 / ITコンサルタント
+              伴走堂 代表 / CRM伴走コンサルタント
             </p>
 
             <div className="mt-8 space-y-4 text-base leading-8 text-text-custom">
@@ -80,7 +74,7 @@ export default function AboutPage() {
                 それが、伴走堂をつくった理由です。
                 <br />
                 難しいことを、わかりやすく。
-                ITを、現場の武器に。
+                CRMを、現場の武器に。
               </p>
             </div>
 
@@ -89,7 +83,7 @@ export default function AboutPage() {
                 保有資格
               </h3>
               <ul className="mt-4 space-y-2">
-                {qualifications.map((qual) => (
+                {SALESFORCE_QUALIFICATIONS.map((qual) => (
                   <li
                     key={qual}
                     className="flex items-start gap-2 text-sm leading-7 text-text-custom"

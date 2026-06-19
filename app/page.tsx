@@ -1,11 +1,11 @@
 import Hero from "@/components/lp/Hero";
 import Problems from "@/components/lp/Problems";
-import ServiceCards from "@/components/lp/ServiceCards";
-import SalonPackageBanner from "@/components/lp/SalonPackageBanner";
+import CrmStats from "@/components/lp/CrmStats";
+import CrmOverview from "@/components/lp/CrmOverview";
+import CrmProcess from "@/components/lp/CrmProcess";
 import Philosophy from "@/components/lp/Philosophy";
-import Representative from "@/components/lp/Representative";
-import Testimonials from "@/components/lp/Testimonials";
 import Cases from "@/components/lp/Cases";
+import Representative from "@/components/lp/Representative";
 import FAQ from "@/components/lp/FAQ";
 import ContactSection from "@/components/lp/ContactSection";
 
@@ -13,13 +13,13 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <CrmStats />
       <Problems />
-      <SalonPackageBanner />
-      <ServiceCards />
+      <CrmOverview />
+      <CrmProcess />
       <Philosophy />
-      <Representative />
-      <Testimonials />
       <Cases />
+      <Representative />
       <FAQ />
       <ContactSection />
     </>

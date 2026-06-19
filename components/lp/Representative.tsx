@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FOCUS_RING } from "@/lib/a11y";
-import { IMAGES, SITE } from "@/lib/site";
+import { IMAGES, SALESFORCE_QUALIFICATION_LABEL, SITE } from "@/lib/site";
 
 export default function Representative() {
   return (
@@ -26,7 +26,7 @@ export default function Representative() {
           </h2>
           <p className="mt-2 text-sm text-text-custom/70">{SITE.title}</p>
           <p className="mt-1 text-sm text-text-custom/70">
-            Salesforce公認資格 保有
+            Salesforce公認資格 {SALESFORCE_QUALIFICATION_LABEL}保有
           </p>
           <p className="mt-4 break-words text-sm leading-7 text-text-custom/80">
             大学卒業後、法人営業・M&A仲介を経て、
@@ -42,7 +42,7 @@ export default function Representative() {
           </p>
           <p className="mt-3 break-words text-sm leading-7 text-text-custom/80">
             難しいことを、わかりやすく。
-            ITを、現場の武器に。
+            CRMを、現場の武器に。
           </p>
           <Link
             href="/about"
