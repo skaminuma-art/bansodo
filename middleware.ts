@@ -1,13 +1,15 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import {
+  getSiteAccessCredentials,
+  isSiteLocked,
+  maintenanceHtml,
+} from "@/lib/site-lock";
 
-function isSiteLocked() {
-  return process.env.SITE_LOCKED === "true";
-}
+const NO_INDEX = { "X-Robots-Tag": "noindex, nofollow" };
 
 function isAuthorized(request: NextRequest) {
-  const user = process.env.SITE_ACCESS_USER ?? "bansodo";
-  const password = process.env.SITE_ACCESS_PASSWORD;
+  const { user, password } = getSiteAccessCredentials();
   if (!password) return false;
 
   const authHeader = request.headers.get("authorization");
@@ -37,13 +39,13 @@ export function middleware(request: NextRequest) {
     return response;
   }
 
-  const password = process.env.SITE_ACCESS_PASSWORD;
+  const { password } = getSiteAccessCredentials();
   if (!password) {
-    return new NextResponse("サイトは現在準備中です。", {
+    return new NextResponse(maintenanceHtml(), {
       status: 503,
       headers: {
-        "Content-Type": "text/plain; charset=utf-8",
-        "X-Robots-Tag": "noindex, nofollow",
+        "Content-Type": "text/html; charset=utf-8",
+        ...NO_INDEX,
       },
     });
   }
@@ -52,7 +54,7 @@ export function middleware(request: NextRequest) {
     status: 401,
     headers: {
       "WWW-Authenticate": 'Basic realm="伴走堂 プレビュー"',
-      "X-Robots-Tag": "noindex, nofollow",
+      ...NO_INDEX,
     },
   });
 }
