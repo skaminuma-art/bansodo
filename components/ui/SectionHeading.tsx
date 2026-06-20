@@ -19,18 +19,16 @@ export default function SectionHeading({
 
   return (
     <div className={centered ? "text-center" : ""}>
-      <div
-        className={`mb-4 flex items-center gap-3 ${centered ? "justify-center" : ""}`}
+      <p
+        className={`mb-3 text-[11px] font-semibold tracking-[0.2em] uppercase ${
+          dark ? "text-accent" : "text-accent"
+        } ${centered ? "" : ""}`}
       >
-        <div className="h-px w-7 bg-accent" />
-        <span className="text-[11px] font-medium tracking-[0.22em] text-accent uppercase sm:text-xs">
-          {label}
-        </span>
-        {centered && <div className="h-px w-7 bg-accent" />}
-      </div>
+        {label}
+      </p>
       <h2
         id={id}
-        className={`font-mincho text-xl font-black leading-relaxed tracking-wide sm:text-2xl md:text-3xl lg:text-4xl ${
+        className={`font-mincho text-xl font-black leading-[1.5] tracking-wide sm:text-2xl md:text-3xl ${
           dark ? "text-white" : "text-primary"
         }`}
       >
@@ -38,9 +36,9 @@ export default function SectionHeading({
       </h2>
       {description && (
         <p
-          className={`mt-3 max-w-2xl break-words text-[15px] leading-relaxed sm:text-sm ${
+          className={`mt-4 max-w-xl break-words text-[15px] leading-relaxed sm:text-sm ${
             centered ? "mx-auto" : ""
-          } ${dark ? "text-white/60" : "text-text-custom/60"}`}
+          } ${dark ? "text-white/55" : "text-text-custom/55"}`}
         >
           {description}
         </p>

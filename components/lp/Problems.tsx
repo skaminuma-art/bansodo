@@ -9,7 +9,7 @@ const problems = [
 
 export default function Problems() {
   return (
-    <section className="overflow-x-hidden bg-bg-custom px-4 py-14 sm:px-8 sm:py-24">
+    <section className="section-surface overflow-x-hidden px-4 py-14 sm:px-8 sm:py-24">
       <div className="mx-auto w-full max-w-3xl">
         <SectionHeading
           label="Problems"

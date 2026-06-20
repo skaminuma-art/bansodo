@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IMAGES, LOGO, SALESFORCE_QUALIFICATIONS, SITE } from "@/lib/site";
+import { IMAGES, LOGO, SITE } from "@/lib/site";
 import type { ServiceData } from "@/lib/services";
 
 export const SITE_URL = "https://bansodo.jp";
@@ -221,7 +221,7 @@ export function getServiceMetadata(service: ServiceData): Metadata {
 
 export const aboutMetadata = createPageMetadata({
   title: `私たちについて | ${SITE.name}`,
-  description: `${SITE.name}代表・${SITE.representative}のプロフィールと経歴。Salesforce公認資格${SALESFORCE_QUALIFICATIONS.length}種保有。CRM導入して終わりにしない、現場に定着する伴走支援を提供しています。`,
+  description: `${SITE.name}代表・${SITE.representative}のプロフィールと経歴。CRM導入して終わりにしない、現場に定着する伴走支援を提供しています。`,
   path: "/about",
   ogImage: IMAGES.representative,
   ogImageAlt: `${SITE.name} 代表 ${SITE.representative}`,

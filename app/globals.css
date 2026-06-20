@@ -70,6 +70,18 @@ body {
   .glow-accent {
     box-shadow: 0 0 80px rgba(46, 204, 138, 0.15);
   }
+
+  .bg-mesh-hero {
+    background:
+      radial-gradient(ellipse 80% 60% at 80% 20%, rgba(46, 204, 138, 0.12) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 50% at 10% 80%, rgba(46, 204, 138, 0.06) 0%, transparent 50%),
+      linear-gradient(165deg, #0f1e30 0%, #0a1520 100%);
+  }
+
+  .section-surface {
+    background-color: #f8f7f4;
+    background-image: radial-gradient(ellipse 100% 80% at 50% -20%, rgba(46, 204, 138, 0.04) 0%, transparent 50%);
+  }
 }
 
 @media (max-width: 639px) {

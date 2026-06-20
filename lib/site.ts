@@ -29,22 +29,6 @@ export const IMAGES = {
   representative: "/images/representative.jpg",
 } as const;
 
-export const SALESFORCE_QUALIFICATIONS = [
-  "Salesforce認定アドミニストレーター",
-  "Salesforce認定上級アドミニストレーター",
-  "Salesforce認定Platform App Builder",
-  "Salesforce認定Platform Developer I",
-  "Salesforce認定Sales Cloud Consultant",
-  "Salesforce認定Service Cloud Consultant",
-  "Salesforce認定Business Analyst",
-  "Salesforce認定AI Associate",
-  "Salesforce認定Data Cloud Consultant",
-  "Salesforce認定Marketing Cloud Email Specialist",
-  "Salesforce認定Associate",
-] as const;
-
-export const SALESFORCE_QUALIFICATION_LABEL = `${SALESFORCE_QUALIFICATIONS.length}種`;
-
 export const CRM_NAV = [
   { href: "/services/crm", label: "CRM導入・定着支援" },
   { href: "/#features", label: "選ばれる理由" },
@@ -66,7 +50,7 @@ export const SERVICES_NAV = [
 
 export const CRM_STATS = [
   { value: "300+", label: "社長との\n直接ヒアリング" },
-  { value: SALESFORCE_QUALIFICATION_LABEL, label: "Salesforce\n公認資格" },
+  { value: "4", label: "段階の\n伴走プロセス" },
   { value: "100%", label: "定着支援まで\n伴走" },
 ] as const;
 
@@ -82,4 +66,11 @@ export const STEPS = [
   { step: 2, title: "ヒアリング・提案", description: "現場に合った最適なプランをご提案します。" },
   { step: 3, title: "構築・導入", description: "一緒に手を動かしながら、丁寧に構築します。" },
   { step: 4, title: "定着支援・伴走", description: "使いこなせるまで、継続的にサポートします。" },
+] as const;
+
+export const REPRESENTATIVE_STRENGTHS = [
+  "CRM導入・定着支援の現場経験",
+  "300名以上の中小企業社長との直接ヒアリング",
+  "Excel散在データの整理・移行支援",
+  "専門用語を使わない、現場目線の設計",
 ] as const;

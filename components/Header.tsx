@@ -38,7 +38,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-primary/10 bg-bg-custom/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-primary/8 bg-bg-custom/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-8 sm:py-4">
         <Link
           href="/"
@@ -47,8 +47,8 @@ export default function Header() {
           <span className="font-mincho text-xl font-bold tracking-wider text-primary sm:text-2xl sm:tracking-widest">
             伴走堂
           </span>
-          <span className="font-gothic text-[10px] tracking-[0.25em] text-primary/60 sm:text-xs sm:tracking-[0.3em]">
-            CRM PARTNER
+          <span className="font-gothic text-[10px] tracking-[0.2em] text-primary/45 sm:text-[11px]">
+            CRM伴走支援
           </span>
         </Link>
 

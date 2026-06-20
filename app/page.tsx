@@ -5,6 +5,7 @@ import CrmOverview from "@/components/lp/CrmOverview";
 import CrmProcess from "@/components/lp/CrmProcess";
 import Philosophy from "@/components/lp/Philosophy";
 import Cases from "@/components/lp/Cases";
+import WorkGallery from "@/components/lp/WorkGallery";
 import Representative from "@/components/lp/Representative";
 import FAQ from "@/components/lp/FAQ";
 import ContactSection from "@/components/lp/ContactSection";
@@ -31,6 +32,9 @@ export default function Home() {
       </Reveal>
       <Reveal>
         <Cases />
+      </Reveal>
+      <Reveal>
+        <WorkGallery />
       </Reveal>
       <Reveal>
         <Representative />

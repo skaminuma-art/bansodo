@@ -9,7 +9,7 @@ const crm = services.crm;
 
 export default function CrmOverview() {
   return (
-    <section id="features" className="overflow-x-hidden bg-bg-custom py-14 sm:py-28">
+    <section id="features" className="overflow-x-hidden bg-white py-14 sm:py-28">
       <div className="mx-auto w-full min-w-0 max-w-5xl px-4 sm:px-8">
         <SectionHeading
           label="CRM Service"
